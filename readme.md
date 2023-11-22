@@ -4,3 +4,4 @@
 4. Seiya (Seksi konsumsi) "Tetaplah Bernafas"
 5. Adi (Mage/Tank) "Hidup seperti Larry"
 6. ---
+7. ???
