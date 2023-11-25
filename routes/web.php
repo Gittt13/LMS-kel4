@@ -28,3 +28,19 @@ Route::group( ['middleware' => ['auth']], function() {
 Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
+
+Route::get('/admin', function() {
+    return view('admin');
+})->name('admin');
+
+Route::get('/student', function() {
+    return view('student');
+})->name('student');
+
+Route::get('/teacher', function() {
+    return view('teacher');
+})->name('teacher');
+
+Route::get('/home', function() {
+    return view('home');
+})->name('home');
