@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        @foreach($courses as $course)
+        {{-- @foreach($courses as $course)
             <div class="col-md-4">
                 <div class="card card-widget widget-user">
                     <!-- Add the bg color to the header using any of the bg-* classes -->
@@ -45,7 +45,7 @@
                 </div>
                 <!-- /.col -->
             </div>
-        @endforeach
+        @endforeach --}}
     </div>
 </div>
 @endsection
