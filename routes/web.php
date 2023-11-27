@@ -44,3 +44,7 @@ Route::get('/teacher', function() {
 Route::get('/home', function() {
     return view('home');
 })->name('home');
+
+Route::get('/welcome', function() {
+    return view('welcome');
+})->name('welcome');
