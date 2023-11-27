@@ -41,9 +41,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 <!-- Header -->
 <header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">START PAGE</h1>
+  <h1 class="w3-margin w3-jumbo">Learning Management System</h1>
   <p class="w3-xlarge">dummy</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">Get Started</button>
+  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="">Get Started</a></button>
 </header>
 
 <!-- First Grid -->
@@ -83,7 +83,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
+    <h1 class="w3-margin w3-xlarge">Quote of the day : <br> tetap bernapas dan hidup lah seperti Larry</h1>
 </div>
 
 <!-- Footer -->
