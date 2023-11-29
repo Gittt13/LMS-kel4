@@ -18,4 +18,7 @@ class StudentController extends Controller
     {
         $this->middleware('auth')->except('messages');
     }
+    public function tugas(){
+        return view('tugas_student');
+    }
 }

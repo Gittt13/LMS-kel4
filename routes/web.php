@@ -20,7 +20,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/stream', 'HomeController@stream')->name('stream')->middleware('verified');
 
-Route::group( ['middleware' => ['auth']], function() {
+Route::group(['middleware' => ['auth']], function () {
     Route::resource('courses', 'CourseController');
     Route::resource('roles', 'RoleController');
     Route::resource('lessons', 'LessonController')->except('create');
@@ -32,7 +32,7 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
     \UniSharp\LaravelFilemanager\Lfm::routes();
 });
 
-Route::get('/admin', function() {
+Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
@@ -47,21 +47,54 @@ Route::get('/teacher', function() {
     return view('teacher');
 })->name('teacher');
 
-Route::get('/home', function() {
+Route::get('/home', function () {
     return view('home');
 })->name('home');
 
+Route::get('/welcome', function () {
+    return view('welcome');
+})->name('welcome');
 
-// Buat ngirim email
-Route::get('profile', function () {
-    // Only verified users may enter...
-})->middleware('verified');
+// Awal Route Student
+Route::get('/student', function () {
+    return view('students.student');
+})->name('student');
+
+Route::get('/home', function () {
+    return view('students.home_student');
+})->name('home');
+
+Route::get('/nilai', function () {
+    return view('students.nilai_student');
+})->name('nilai');
+
+Route::get('/kalender', function () {
+    return view('students.kalender_student');
+})->name('kalender');
+
+Route::get('/tugas', function () {
+    return view('students.tugas_student');
+})->name('tugas');
+
+Route::get('/absensi', function () {
+    return view('students.absensi_student');
+})->name('absensi');
+
+Route::get('/keuangan', function () {
+    return view('students.keuangan_student');
+})->name('keuangan');
+// Akhir Route Student
 
 
-Route::get('/sendEmail', 'SendEmailController@index')->name('emails.test_mail');
-
-
-
-
+// ROUTE ADMIN
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/stream', 'StreamController@index')->name('stream');
+Route::get('/about', 'AboutController@index')->name('about');
+Route::get('/data-jurusan', 'DataJurusanController@index')->name('data-jurusan');
+Route::get('/data-mata-pelajaran', 'DataMataPelajaranController@index')->name('data-mata-pelajaran');
+Route::get('/data-mahasiswa', 'DataMahasiswaController@index')->name('data-mahasiswa');
+Route::get('/data-user-admin', 'DataUserAdminController@index')->name('data-user-admin');
+Route::get('/reports', 'ReportsController@index')->name('reports');
+Route::get('/settings', 'SettingsController@index')->name('settings');
 
 

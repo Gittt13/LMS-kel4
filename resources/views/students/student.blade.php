@@ -18,7 +18,7 @@
                 <div class="card text-center" style="background-color: #00C0EF">
                     <div class="card-body">
                         <ion-icon name="people-outline" style="font-size: 90px; color: white"></ion-icon>
-                        <h3 class="text-white">Tugas Siswa</h3>
+                        <h3 class="text-white">Absensi</h3>
                         <h3 class="text-white">66</h3>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
                 <div class="card text-center" style="background-color: #00C0EF">
                     <div class="card-body">
                         <ion-icon name="people-outline" style="font-size: 90px; color: white"></ion-icon>
-                        <h3 class="text-white">Tugas Siswa</h3>
+                        <h3 class="text-white">Keuangan</h3>
                         <h3 class="text-white">66</h3>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="card text-center" style="background-color: #00C0EF">
                     <div class="card-body">
                         <ion-icon name="people-outline" style="font-size: 90px; color: white"></ion-icon>
-                        <h3 class="text-white">Tugas Siswa</h3>
+                        <h3 class="text-white">Nilai</h3>
                         <h3 class="text-white">66</h3>
                     </div>
                 </div>

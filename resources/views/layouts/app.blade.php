@@ -24,7 +24,7 @@
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.3&appId=358872005021678"></script>
-    <div id="app">
+    <div class=""id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -80,6 +80,7 @@
 
         <main class="py-4">
             @yield('content')
+            
         </main>
     </div>
 </body>
