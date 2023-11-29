@@ -1,5 +1,6 @@
 @extends('layouts.admin')
 @section('content')
+
 <header>
   <h5><b><i class="fa fa-dashboard"></i>Dashboard Admin</b></h5>
   

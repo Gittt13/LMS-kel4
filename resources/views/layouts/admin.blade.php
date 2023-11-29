@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -15,6 +16,22 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   @yield('styles')
   @include('includes.analytics')
+  <style>
+    .sidebar-dark-primary {
+      background-color: #64CCC5;
+    }
+
+    .sidebar-dark-primary .nav-sidebar .nav-item .nav-link {
+      color: #192655;
+    }
+    
+    .sidebar-dark-primary .info a {
+        color: #192655;
+    }
+
+    
+
+  </style>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -81,7 +98,7 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
             <li class="nav-item has-treeview">
-              <a href="{{ route('home') }}" class="nav-link {{ is_active('home') }}">
+              <a href="{{ route('home') }}" class="nav-link {{ is_active('home') }} ">
                 <i class="nav-icon fas fa-home"></i>
                 <p>
                   {{ __('Home') }}
@@ -90,12 +107,12 @@
             </li>
             {{-- <li class="nav-item">
               <a href="{{ route('stream') }}" class="nav-link {{ is_active('stream') }}">
-                <i class="nav-icon fas fa-play"></i>
-                <p>
-                  {{ __('Stream') }}
-                  <span class="right badge badge-danger">New</span>
-                </p>
-              </a>
+            <i class="nav-icon fas fa-play"></i>
+            <p>
+              {{ __('Stream') }}
+              <span class="right badge badge-danger">New</span>
+            </p>
+            </a>
             </li> --}}
 
             <li class="nav-item">
@@ -140,11 +157,11 @@
             </li>
             {{-- <li class="nav-item">
               <a href="{{ route('admin.reports') }}" class="nav-link {{ is_active('admin.reports') }}">
-                <i class="nav-icon fas fa-chart-bar"></i>
-                <p>
-                  {{ __('Reports') }}
-                </p>
-              </a>
+            <i class="nav-icon fas fa-chart-bar"></i>
+            <p>
+              {{ __('Reports') }}
+            </p>
+            </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('admin.settings') }}" class="nav-link {{ is_active('admin.settings') }}">
@@ -156,110 +173,110 @@
             </li> --}}
             {{-- <li class="nav-item">
               <a href="{{ route('logout') }}" class="nav-link">
-                <i class="nav-icon fas fa-sign-out-alt"></i>
+            <i class="nav-icon fas fa-sign-out-alt"></i>
+            <p>
+              {{ __('Logout') }}
+            </p>
+            </a>
+            </li> --}}
+
+
+            @can('view_admin')
+            <li class="nav-header">@lang('menus.administration')</li>
+
+            <li class="nav-item">
+              <a href="{{ route('roles.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-lock"></i>
+                <p>
+                  @lang('roles.roles')
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ route('courses.index') }}" class="nav-link">
+                <i class="nav-icon fas fa-book"></i>
+                <p>
+                  @lang('course/fields.courses')
+                </p>
+              </a>
+            </li>
+            @endcan
+            <li class="nav-header"></li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                <i class="nav-icon fas fa-power-off red"></i>
                 <p>
                   {{ __('Logout') }}
                 </p>
               </a>
-            </li> --}}
-          
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+              </form>
+            </li>
+          </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+      </div>
+      <!-- /.sidebar -->
+    </aside>
 
-        @can('view_admin')
-        <li class="nav-header">@lang('menus.administration')</li>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">@yield('title')</h1>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content-header -->
 
-        <li class="nav-item">
-          <a href="{{ route('roles.index') }}" class="nav-link">
-            <i class="nav-icon fas fa-lock"></i>
-            <p>
-              @lang('roles.roles')
-            </p>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a href="{{ route('courses.index') }}" class="nav-link">
-            <i class="nav-icon fas fa-book"></i>
-            <p>
-              @lang('course/fields.courses')
-            </p>
-          </a>
-        </li>
-        @endcan
-        <li class="nav-header"></li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-            <i class="nav-icon fas fa-power-off red"></i>
-            <p>
-              {{ __('Logout') }}
-            </p>
-          </a>
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-          </form>
-        </li>
-      </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
+      <!-- Main content -->
+      <div class="content">
+        <div class="container-fluid">
+          @include('sweetalert::alert')
+          @include('flash::message')
+          <div class="row">
+            @yield('content')
+          </div>
+          <!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
+      <!-- /.content -->
     </div>
-    <!-- /.sidebar -->
-  </aside>
+    <!-- /.content-wrapper -->
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1 class="m-0 text-dark">@yield('title')</h1>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content-header -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+      <div class="p-3">
+        <h5>Title</h5>
+        <p>Sidebar content</p>
+      </div>
+    </aside>
+    <!-- /.control-sidebar -->
 
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        @include('sweetalert::alert')
-        @include('flash::message')
-        <div class="row">
-          @yield('content')
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <!-- To the right -->
+      <div class="float-right d-none d-sm-inline">
+        {{ Config::get('settings.name') }}
+      </div>
+      <!-- Default to the left -->
+      <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="http://angelkurten.com">Angel Kürten</a>.</strong> All rights reserved.
+    </footer>
   </div>
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-    <div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <!-- To the right -->
-    <div class="float-right d-none d-sm-inline">
-      {{ Config::get('settings.name') }}
-    </div>
-    <!-- Default to the left -->
-    <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="https://www.linkedin.com/in/muhammad-anggit-b83772262/">Kelompok 4 MSIB Gamelab</a>.</strong> All rights reserved.
-  </footer>
-</div>
-<!-- ./wrapper -->
+  <!-- ./wrapper -->
 
 
-<script src="{{ asset('js/app.js') }}"></script>
-<script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
-@yield('scripts')
+  <script src="{{ asset('js/app.js') }}"></script>
+  <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
+  @yield('scripts')
 </body>
 
 </html>
