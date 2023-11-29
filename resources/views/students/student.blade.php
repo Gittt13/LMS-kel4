@@ -4,12 +4,13 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <div class="container">
+        <div class="card-header">{{ __('Selamat Datang ') }} {{ auth()->user()->name }}</div>
         <div class="row">
             <div class="col">
                 <div class="card text-center">
                     <div class="card-body" style="background-color: #00C0EF">
                         <ion-icon name="people-outline" style="font-size: 90px; color: white"></ion-icon>
-                        <h3 class="text-white">Tugas Siswa</h3>
+                        <h3 class="text-white">Tugas</h3>
                         <h3 class="text-white">66</h3>
                     </div>
                 </div>

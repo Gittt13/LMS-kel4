@@ -68,10 +68,6 @@ Route::get('/home/student', function () {
     return view('students.home_student');
 })->name('home.student');
 
-Route::get('/nilai', function () {
-    return view('students.nilai_student');
-})->name('nilai');
-
 Route::get('/kalender', function () {
     return view('students.kalender_student');
 })->name('kalender');
@@ -80,13 +76,9 @@ Route::get('/tugas', function () {
     return view('students.tugas_student');
 })->name('tugas');
 
-Route::get('/absensi', function () {
-    return view('students.absensi_student');
-})->name('absensi');
-
-Route::get('/keuangan', function () {
-    return view('students.keuangan_student');
-})->name('keuangan');
+Route::get('/nilai', function () {
+    return view('students.nilai_student');
+})->name('nilai');
 // Akhir Route Student
 
 

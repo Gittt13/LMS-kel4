@@ -107,26 +107,10 @@
                             </a>
                         </li>
                         <li class="nav-item has-treeview ">
-                            <a href="{{ route('absensi') }}" class="nav-link {{ is_active('absensi') }}">
-                                <i class="fa-solid fa-list-check"></i>
-                                <p>
-                                    {{ __('Absensi') }}
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview ">
                             <a href="{{ route('tugas') }}" class="nav-link {{ is_active('tugas') }}">
                                 <i class="fa-solid fa-file"></i>
                                 <p>
                                     {{ __('Tugas') }}
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item has-treeview ">
-                            <a href="{{ route('keuangan') }}" class="nav-link {{ is_active('keuangan') }}">
-                                <i class="fa-solid fa-money-bill"></i>
-                                <p>
-                                    {{ __('Keuangan') }}
                                 </p>
                             </a>
                         </li>
@@ -220,13 +204,13 @@
         <!-- /.content-wrapper -->
 
         <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
+        {{-- <aside class="control-sidebar control-sidebar-dark">
             <!-- Control sidebar content goes here -->
             <div class="p-3">
                 <h5>Title</h5>
                 <p>Sidebar content</p>
             </div>
-        </aside>
+        </aside> --}}
         <!-- /.control-sidebar -->
 
         <!-- Main Footer -->
