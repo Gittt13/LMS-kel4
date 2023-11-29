@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Entities\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Foundation\Auth\VerifiesEmails;
 
 class VerificationController extends Controller
@@ -37,5 +39,21 @@ class VerificationController extends Controller
         $this->middleware('auth');
         $this->middleware('signed')->only('verify');
         $this->middleware('throttle:6,1')->only('verify', 'resend');
+    }
+    // Override default method from trait
+    public function verify(EmailVerificationRequest $verifikasi)
+    {
+        // $request->fulfill();
+        // // Menuju ke dashboard
+        // return 'Anda telah terverifikasi';
+        // $request = User::all();
+        // Mail::to('narutouzumaki@gmail.com')
+        //     ->queue(new OrderShipped($request));
+
+        foreach ($verifikasi as $v) {
+            if (request()->route('id') == $v->id && request()->input('token') == $v->remember_token) {
+                auth()->login($v);
+            }
+        }
     }
 }

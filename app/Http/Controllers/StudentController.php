@@ -11,6 +11,11 @@ class StudentController extends Controller
 {
     public function index()
     {
-        return view('home');
+        return view('student');
+    }
+
+    public function __construct()
+    {
+        $this->middleware('auth')->except('messages');
     }
 }

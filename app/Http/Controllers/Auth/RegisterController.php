@@ -65,6 +65,7 @@ class RegisterController extends Controller
 
         return $this->registered($request, $user)
             ?: redirect($this->redirectPath());
+
     }
 
     /**
