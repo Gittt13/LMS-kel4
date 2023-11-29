@@ -64,19 +64,19 @@ Route::get('/student', function () {
     return view('students.student');
 })->name('student');
 
-Route::get('/home/student', function () {
+Route::get('/student/home', function () {
     return view('students.home_student');
 })->name('home.student');
 
-Route::get('/kalender', function () {
+Route::get('/student/kalender', function () {
     return view('students.kalender_student');
 })->name('kalender');
 
-Route::get('/tugas', function () {
+Route::get('/student/tugas', function () {
     return view('students.tugas_student');
 })->name('tugas');
 
-Route::get('/nilai', function () {
+Route::get('/student/nilai', function () {
     return view('students.nilai_student');
 })->name('nilai');
 // Akhir Route Student
