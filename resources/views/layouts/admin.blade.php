@@ -24,12 +24,10 @@
     .sidebar-dark-primary .nav-sidebar .nav-item .nav-link {
       color: #192655;
     }
-    
-    .sidebar-dark-primary .info a {
-        color: #192655;
-    }
 
-    
+    .sidebar-dark-primary .info a {
+      color: #192655;
+    }
 
   </style>
 </head>
@@ -50,26 +48,82 @@
           </a>
         </li>
 
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="{{ route('stream') }}" class="nav-link {{ is_active('stream') }}">
-            <i class="nav-icon fas fa-play"></i>
-            {{ __('Stream') }}
-            <span class="right badge badge-danger">New</span>
-          </a>
-        </li>
-      </ul>
-
-      <!-- SEARCH FORM -->
-      <form class="form-inline ml-3">
-        <div class="input-group input-group-sm">
-          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-          <div class="input-group-append">
-            <button class="btn btn-navbar" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
+        <!-- SEARCH FORM -->
+        <form class="form-inline ml-3">
+          <div class="input-group input-group-sm">
+            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-navbar" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
           </div>
+        </form>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <!-- Notifications Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="fa fa-bell"></i> <!-- Icon pemberitahuan -->
+            </a>
+            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+              <a href="#" class="dropdown-item">Notification 1</a>
+              <a href="#" class="dropdown-item">Notification 2</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">View All Notifications</a>
+            </div>
+          </li>
+
+          <!-- User Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <img src="https://cdn-icons-png.flaticon.com/512/2304/2304226.png" class="img-circle elevation-2" alt="User Image" style="width: 24px; height: 24px;">
+              <!-- Gambar profil -->
+            </a>
+            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+              <a href="#" class="dropdown-item">Profile</a>
+              <a href="#" class="dropdown-item">Settings</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Logout</a>
+            </div>
+          </li>
+
+          <!-- Chat Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="fa fa-comments"></i> <!-- Icon chat -->
+            </a>
+            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+              <a href="#" class="dropdown-item">Chat 1</a>
+              <a href="#" class="dropdown-item">Chat 2</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Open Chat Window</a>
+            </div>
+          </li>
+        </ul>
+    </nav>
+
+    {{-- <li class="nav-item d-none d-sm-inline-block">
+          <a href="{{ route('stream') }}" class="nav-link {{ is_active('stream') }}">
+    <i class="nav-icon fas fa-play"></i>
+    {{ __('Stream') }}
+    <span class="right badge badge-danger">New</span>
+    </a>
+    </li> --}}
+    </ul>
+
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
         </div>
-      </form>
+      </div>
+    </form>
     </nav>
     <!-- /.navbar -->
 
@@ -98,10 +152,10 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
             <li class="nav-item has-treeview">
-              <a href="{{ route('home') }}" class="nav-link {{ is_active('home') }} ">
+              <a href="{{ route('admin.dashboard') }}" class="nav-link {{ is_active('admin.dashboard') }} ">
                 <i class="nav-icon fas fa-home"></i>
                 <p>
-                  {{ __('Home') }}
+                  {{ __('Dashboard') }}
                 </p>
               </a>
             </li>
@@ -123,38 +177,53 @@
                 </p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="{{ route('admin.data-jurusan') }}" class="nav-link {{ is_active('admin.data-jurusan') }}">
-                <i class="nav-icon fas fa-list"></i>
-                <p>
-                  {{ __('Data Jurusan') }}
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ route('admin.data-mata-kuliah') }}" class="nav-link {{ is_active('admin.data-mata-kuliah') }}">
-                <i class="nav-icon fas fa-book"></i>
-                <p>
-                  {{ __('Data Mata Kuliah') }}
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ route('admin.data-mahasiswa') }}" class="nav-link {{ is_active('admin.data-mahasiswa') }}">
-                <i class="nav-icon fas fa-user-graduate"></i>
-                <p>
-                  {{ __('Data Mahasiswa') }}
-                </p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ route('admin.data-dosen') }}" class="nav-link {{ is_active('admin.data-dosen') }}">
-                <i class="nav-icon fas fa-users"></i>
-                <p>
-                  {{ __('Data Dosen') }}
-                </p>
-              </a>
-            </li>
+
+            <!-- DROPDOWN-->
+            <nav class="mt-2">
+              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-database"></i>
+                    <p>
+                      Data
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="{{ route('admin.data-mahasiswa') }}" class="nav-link {{ is_active('admin.data-mahasiswa') }}">
+                        <i class="nav-icon fas fa-user-graduate"></i>
+                        <p>Data Mahasiswa</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ route('admin.data-dosen') }}" class="nav-link {{ is_active('admin.data-dosen') }}">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Data Dosen</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ route('admin.data-jurusan') }}" class="nav-link {{ is_active('admin.data-jurusan') }}">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>Data Jurusan</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ route('admin.data-mata-kuliah') }}" class="nav-link {{ is_active('admin.data-mata-kuliah') }}">
+                        <i class="nav-icon fas fa-book"></i>
+                        <p>Data Mata Kuliah</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <!-- Your other menu items -->
+
+              </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+
             {{-- <li class="nav-item">
               <a href="{{ route('admin.reports') }}" class="nav-link {{ is_active('admin.reports') }}">
             <i class="nav-icon fas fa-chart-bar"></i>
@@ -268,7 +337,7 @@
         {{ Config::get('settings.name') }}
       </div>
       <!-- Default to the left -->
-      <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="http://angelkurten.com">Angel Kürten</a>.</strong> All rights reserved.
+      <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="http://angelkurten.com">KELOMPOK 4</a>.</strong> Jika orang lain bisa kenapa harus saya.
     </footer>
   </div>
   <!-- ./wrapper -->
@@ -276,6 +345,7 @@
 
   <script src="{{ asset('js/app.js') }}"></script>
   <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
+
   @yield('scripts')
 </body>
 

@@ -83,7 +83,7 @@ Route::get('/student/nilai', function () {
 
 
 // ROUTE ADMIN
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin.dashboard', 'DashboardController@index')->name('admin.dashboard');
 // Route::get('/stream', 'StreamController@index')->name('stream');
 Route::get('/admin.about', 'AboutController@index')->name('admin.about');
 Route::get('/admin.data-jurusan', 'DataJurusanController@index')->name('admin.data-jurusan');
@@ -92,5 +92,6 @@ Route::get('/admin.data-mahasiswa', 'DataMahasiswaController@index')->name('admi
 Route::get('/admin.data-dosen', 'DataDosenController@index')->name('admin.data-dosen');
 Route::get('/admin.reports', 'ReportsController@index')->name('admin.reports');
 Route::get('/admin.settings', 'SettingsController@index')->name('admin.settings');
+
 
 // ROUTE ADMIN
