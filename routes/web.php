@@ -78,14 +78,15 @@ Route::get('/keuangan', function () {
 
 // ROUTE ADMIN
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/stream', 'StreamController@index')->name('stream');
+// Route::get('/stream', 'StreamController@index')->name('stream');
 Route::get('/about', 'AboutController@index')->name('about');
 Route::get('/data-jurusan', 'DataJurusanController@index')->name('data-jurusan');
 Route::get('/data-mata-pelajaran', 'DataMataPelajaranController@index')->name('data-mata-pelajaran');
 Route::get('/data-mahasiswa', 'DataMahasiswaController@index')->name('data-mahasiswa');
-Route::get('/data-user-admin', 'DataUserAdminController@index')->name('data-user-admin');
+Route::get('/admin.data-dosen', 'DataDosenController@index')->name('admin.data-dosen');
 Route::get('/reports', 'ReportsController@index')->name('reports');
 Route::get('/settings', 'SettingsController@index')->name('settings');
+
 
 
 // ROUTE ADMIN

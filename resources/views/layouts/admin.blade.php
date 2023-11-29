@@ -131,10 +131,10 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('data-user-admin') }}" class="nav-link {{ is_active('data-user-admin') }}">
+              <a href="{{ route('admin.data-dosen') }}" class="nav-link {{ is_active('admin.data-dosen') }}">
                 <i class="nav-icon fas fa-users"></i>
                 <p>
-                  {{ __('Data User/Admin') }}
+                  {{ __('Data Dosen') }}
                 </p>
               </a>
             </li>
