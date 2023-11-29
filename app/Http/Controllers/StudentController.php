@@ -13,4 +13,7 @@ class StudentController extends Controller
     {
         return view('home');
     }
+    public function tugas(){
+        return view('tugas_student');
+    }
 }

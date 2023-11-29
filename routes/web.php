@@ -47,30 +47,30 @@ Route::get('/welcome', function () {
 
 // Awal Route Student
 Route::get('/student', function () {
-    return view('student');
+    return view('students.student');
 })->name('student');
 
 Route::get('/home', function () {
-    return view('home_student');
+    return view('students.home_student');
 })->name('home');
 
 Route::get('/nilai', function () {
-    return view('nilai_student');
+    return view('students.nilai_student');
 })->name('nilai');
 
 Route::get('/kalender', function () {
-    return view('kalender_student');
+    return view('students.kalender_student');
 })->name('kalender');
 
 Route::get('/tugas', function () {
-    return view('tugas_student');
+    return view('students.tugas_student');
 })->name('tugas');
 
 Route::get('/absensi', function () {
-    return view('absensi_student');
+    return view('students.absensi_student');
 })->name('absensi');
 
 Route::get('/keuangan', function () {
-    return view('keuangan_student');
+    return view('students.keuangan_student');
 })->name('keuangan');
 // Akhir Route Student
