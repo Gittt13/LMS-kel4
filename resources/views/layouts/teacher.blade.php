@@ -81,7 +81,7 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 
                     <li class="nav-item has-treeview">
-                        <a href="{{ route('home') }}" class="nav-link {{ is_active('home') }}">
+                        <a href="{{ route('home.teacher') }}" class="nav-link {{ is_active('home') }}">
                             <i class="nav-icon fas fa-home"></i>
                             <p>
                                 {{ __('Home') }}
@@ -90,7 +90,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="{{ route('stream') }}" class="nav-link  {{ is_active('stream') }}">
+                        <a href="{{ route('profile') }}" class="nav-link  {{ is_active('profile') }}">
                             <i class="nav-icon fas fa-user"></i>
                             <p>
                                 {{ __('Profile') }}
@@ -99,7 +99,7 @@
                     </li>
 
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link">
+                        <a href="kelas" class="nav-link">
                             <i class="nav-icon fas fa-chalkboard"></i>
                             <p>
                                 {{ __('Kelas') }}
@@ -107,7 +107,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link">
+                                <a href="" class="nav-link">
                                     <i class="fas fa-link"></i>
                                     <p>Kelas 1</p>
                                 </a>
@@ -128,7 +128,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="{{ route('stream') }}" class="nav-link  {{ is_active('stream') }}">
+                        <a href="{{ route('absensi') }}" class="nav-link  {{ is_active('absensi') }}">
                             <i class="nav-icon fas fa-clipboard-check"></i>
                             <p>
                                 {{ __('Absensi') }}
@@ -235,4 +235,3 @@
 @yield('scripts')
 </body>
 </html>
-

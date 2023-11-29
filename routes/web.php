@@ -95,3 +95,22 @@ Route::get('/admin.settings', 'SettingsController@index')->name('admin.settings'
 
 
 // ROUTE ADMIN
+
+// Route teacher
+
+        Route::get('/teacher/home', function () {
+            return view('teacher.home_teacher');
+        })->name('home.teacher');
+
+        Route::get('/teacher/profile', function () {
+            return view('teacher.profile_teacher');
+        })->name('profile');
+
+        Route::get('/teacher/tugas', function () {
+            return view('teacher.kelas_teacher');
+        })->name('kelas');
+
+        Route::get('/teacher/absensi', function () {
+            return view('teacher.absensi_teacher');
+        })->name('absensi');
+// Route teacher
