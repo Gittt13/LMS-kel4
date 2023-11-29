@@ -1,8 +1,8 @@
-<!-- resources/views/data-user-admin/index.blade.php -->
+
 
 @extends('layouts.admin') <!-- Sesuaikan dengan layout yang Anda gunakan -->
 
-@section('title', 'Data Dosen')
+@section('title', 'About')
 
 @section('content')
 {{-- <div class="container">

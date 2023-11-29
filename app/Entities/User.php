@@ -20,7 +20,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  * @property string media_token
  * @property string email
  */
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable, HasApiTokens, HasRoles, HasFactory;
 

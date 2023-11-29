@@ -99,7 +99,7 @@
             </li> --}}
 
             <li class="nav-item">
-              <a href="{{ route('about') }}" class="nav-link {{ is_active('about') }}">
+              <a href="{{ route('admin.about') }}" class="nav-link {{ is_active('admin.about') }}">
                 <i class="nav-icon fas fa-info"></i>
                 <p>
                   {{ __('About') }}
@@ -107,7 +107,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('data-jurusan') }}" class="nav-link {{ is_active('data-jurusan') }}">
+              <a href="{{ route('admin.data-jurusan') }}" class="nav-link {{ is_active('admin.data-jurusan') }}">
                 <i class="nav-icon fas fa-list"></i>
                 <p>
                   {{ __('Data Jurusan') }}
@@ -115,15 +115,15 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('data-mata-pelajaran') }}" class="nav-link {{ is_active('data-mata-pelajaran') }}">
+              <a href="{{ route('admin.data-mata-kuliah') }}" class="nav-link {{ is_active('admin.data-mata-kuliah') }}">
                 <i class="nav-icon fas fa-book"></i>
                 <p>
-                  {{ __('Data Mata Pelajaran') }}
+                  {{ __('Data Mata Kuliah') }}
                 </p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('data-mahasiswa') }}" class="nav-link {{ is_active('data-mahasiswa') }}">
+              <a href="{{ route('admin.data-mahasiswa') }}" class="nav-link {{ is_active('admin.data-mahasiswa') }}">
                 <i class="nav-icon fas fa-user-graduate"></i>
                 <p>
                   {{ __('Data Mahasiswa') }}
@@ -138,8 +138,8 @@
                 </p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="{{ route('reports') }}" class="nav-link {{ is_active('reports') }}">
+            {{-- <li class="nav-item">
+              <a href="{{ route('admin.reports') }}" class="nav-link {{ is_active('admin.reports') }}">
                 <i class="nav-icon fas fa-chart-bar"></i>
                 <p>
                   {{ __('Reports') }}
@@ -147,13 +147,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('settings') }}" class="nav-link {{ is_active('settings') }}">
+              <a href="{{ route('admin.settings') }}" class="nav-link {{ is_active('admin.settings') }}">
                 <i class="nav-icon fas fa-cogs"></i>
                 <p>
                   {{ __('Settings') }}
                 </p>
               </a>
-            </li>
+            </li> --}}
             {{-- <li class="nav-item">
               <a href="{{ route('logout') }}" class="nav-link">
                 <i class="nav-icon fas fa-sign-out-alt"></i>

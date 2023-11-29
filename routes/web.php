@@ -10,9 +10,12 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
+
+Route::get('/email-send', [MailController::class, 'sendEmail']);
 
 Route::get('/', 'HomeController@index')->name('home')->middleware('verified');
-
 Auth::routes(['verify' => true]);
 
 Route::get('/stream', 'HomeController@stream')->name('stream')->middleware('verified');
@@ -33,7 +36,14 @@ Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
-Route::get('/teacher', function () {
+Route::get('/student', function() {
+    return view('student');
+})->name('student');
+
+Route::get('/student', 'StudentController@index')->name('student')->middleware('verified');
+
+
+Route::get('/teacher', function() {
     return view('teacher');
 })->name('teacher');
 
@@ -79,14 +89,12 @@ Route::get('/keuangan', function () {
 // ROUTE ADMIN
 Route::get('/home', 'HomeController@index')->name('home');
 // Route::get('/stream', 'StreamController@index')->name('stream');
-Route::get('/about', 'AboutController@index')->name('about');
-Route::get('/data-jurusan', 'DataJurusanController@index')->name('data-jurusan');
-Route::get('/data-mata-pelajaran', 'DataMataPelajaranController@index')->name('data-mata-pelajaran');
-Route::get('/data-mahasiswa', 'DataMahasiswaController@index')->name('data-mahasiswa');
+Route::get('/admin.about', 'AboutController@index')->name('admin.about');
+Route::get('/admin.data-jurusan', 'DataJurusanController@index')->name('admin.data-jurusan');
+Route::get('/admin.data-mata-Kuliah', 'DataMataKuliahController@index')->name('admin.data-mata-kuliah');
+Route::get('/admin.data-mahasiswa', 'DataMahasiswaController@index')->name('admin.data-mahasiswa');
 Route::get('/admin.data-dosen', 'DataDosenController@index')->name('admin.data-dosen');
-Route::get('/reports', 'ReportsController@index')->name('reports');
-Route::get('/settings', 'SettingsController@index')->name('settings');
-
-
+Route::get('/admin.reports', 'ReportsController@index')->name('admin.reports');
+Route::get('/admin.settings', 'SettingsController@index')->name('admin.settings');
 
 // ROUTE ADMIN
