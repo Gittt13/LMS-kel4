@@ -11,6 +11,9 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -31,19 +34,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div> -->
 
   <!-- Navbar on small screens -->
-  <!-- <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
     <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
   </div>
-</div> -->
+</div>
 
 <!-- Header -->
-<header class="w3-container w3-red w3-center" style="padding:128px 16px">
-  <h1 class="w3-margin w3-jumbo">Learning Management System</h1>
-  <p class="w3-xlarge">dummy</p>
-  <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top"><a href="">Get Started</a></button>
+<header class="w3-container w3-center" style="padding:128px 16px; background-color:#9BBEC8; font-family: 'Poppins', sans-serif;">
+  <h1 class="w3-margin w3-jumbo" style="color:#DDF2FD; font-family: 'Poppins', sans-serif;">Learning Management System</h1>
+  <p class="w3-xlarge" style="color:#427D9D;">dummy</p>
+  <button class="w3-button  w3-padding-large w3-large w3-margin-top" style="color:#DDF2FD; background-color:#427D9D;"><a href="">Get Started</a></button>
 </header>
 
 <!-- First Grid -->
@@ -56,7 +59,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat.</p>
->>>>>>> 9726eb07ac8cf02660906d5b7a62033094552dbe
     </div>
 
     <div class="w3-third w3-center">
@@ -83,8 +85,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
 
-<div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-    <h1 class="w3-margin w3-xlarge">Quote of the day : <br> tetap bernapas dan hidup lah seperti Larry</h1>
+<div class="w3-container w3-center w3-opacity w3-padding-64" style="color:#DDF2FD; background-color:#164863;">
+    <h1 class="w3-margin w3-xlarge" style="font-family: 'Poppins', sans-serif;">Quote Of The Day : <br> Tetap bernapas dan hidup lah seperti Larry</h1>
 </div>
 
 <!-- Footer -->

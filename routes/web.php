@@ -15,10 +15,14 @@ use App\Http\Controllers\MailController;
 
 Route::get('/email-send', [MailController::class, 'sendEmail']);
 
-Route::get('/', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/', function() {
+    return view('home');
+});
+// Route::get('/', 'HomeController@index')->name('home');
+
 Auth::routes(['verify' => true]);
 
-Route::get('/stream', 'HomeController@stream')->name('stream')->middleware('verified');
+Route::get('/stream', 'HomeController@stream')->name('stream');
 
 Route::group(['middleware' => ['auth']], function () {
     Route::resource('courses', 'CourseController');
@@ -60,9 +64,9 @@ Route::get('/student', function () {
     return view('students.student');
 })->name('student');
 
-Route::get('/home', function () {
+Route::get('/home/student', function () {
     return view('students.home_student');
-})->name('home');
+})->name('home.student');
 
 Route::get('/nilai', function () {
     return view('students.nilai_student');

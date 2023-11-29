@@ -91,7 +91,7 @@
                         data-accordion="false">
 
                         <li class="nav-item has-treeview ">
-                            <a href="{{ route('home') }}" class="nav-link {{ is_active('home') }}">
+                            <a href="{{ route('home.student') }}" class="nav-link {{ is_active('home') }}">
                                 <i class="fa-solid fa-house"></i>
                                 <p>
                                     {{ __('Home') }}
@@ -236,7 +236,7 @@
                 {{ Config::get('settings.name') }}
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="https://www.instagram.com/nhurulanam/">Nurul Anam</a>.</strong> frontend design
+            <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="https://www.instagram.com/nhurulanam/">Kelompok 4 MSIB Gamelab</a>.</strong> frontend design
         </footer>
     </div>
     <!-- ./wrapper -->
