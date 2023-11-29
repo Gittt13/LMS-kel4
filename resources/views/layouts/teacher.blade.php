@@ -53,7 +53,6 @@
             </div>
         </form>
 
-
     </nav>
     <!-- /.navbar -->
 
@@ -92,10 +91,25 @@
                     </li>
                     <li class="nav-item">
                         <a href="{{ route('stream') }}" class="nav-link  {{ is_active('stream') }}">
-                            <i class="nav-icon fas fa-play"></i>
+                            <i class="nav-icon fas fa-user"></i>
                             <p>
-                                {{ __('Stream') }}
-                                <span class="right badge badge-danger">New</span>
+                                {{ __('Profile') }}
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('stream') }}" class="nav-link  {{ is_active('stream') }}">
+                            <i class="nav-icon fas fa-chalkboard"></i>
+                            <p>
+                                {{ __('Kelas') }}
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ route('stream') }}" class="nav-link  {{ is_active('stream') }}">
+                            <i class="nav-icon fas fa-clipboard-check"></i>
+                            <p>
+                                {{ __('Absensi') }}
                             </p>
                         </a>
                     </li>
@@ -190,7 +204,6 @@
     </footer>
 </div>
 <!-- ./wrapper -->
-
 
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
