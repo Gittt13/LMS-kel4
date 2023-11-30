@@ -1,7 +1,6 @@
 @extends('layouts.teacher')
 
 @section('content')
-
 <div class="container mt-5">
     <div class="card">
         <div class="card-header bg-primary text-white text-center">
@@ -13,7 +12,9 @@
                     <i class="fas fa-user fa-5x text-primary"></i>
                 </div>
                 <div class="col-md-9">
-                    <h2 class="card-title">Yanto</h2>
+                <h1 class="card-title" style="color: #000000">
+                     {{ auth()->user()->name }}
+                        </h1>
                     <ul class="list-unstyled">
                         <li><strong>Mata Pelajaran  :</strong> Matematika</li>
                         <li><strong>Email           :</strong> yanto@example.com</li>
@@ -24,5 +25,4 @@
         </div>
     </div>
 </div>
-
 @endsection

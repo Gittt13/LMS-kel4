@@ -106,7 +106,7 @@ Route::get('/admin.settings', 'SettingsController@index')->name('admin.settings'
             return view('teacher.profile_teacher');
         })->name('profile');
 
-        Route::get('/teacher/tugas', function () {
+        Route::get('/teacher/kelas', function () {
             return view('teacher.kelas_teacher');
         })->name('kelas');
 

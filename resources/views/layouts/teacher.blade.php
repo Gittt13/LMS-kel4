@@ -107,7 +107,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="" class="nav-link">
+                                <a href="{{ route('kelas') }}" class="nav-link">
                                     <i class="fas fa-link"></i>
                                     <p>Kelas 1</p>
                                 </a>
@@ -225,7 +225,7 @@
             {{  Config::get('settings.name') }}
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="https://www.linkedin.com/in/muhammad-anggit-b83772262/">Kelompok 4 MSIB Gamelab</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="https://www.linkedin.com/in/muhammad-anggit-b83772262/">Kelompok 4 MSIB Gamelab</a>.</strong> Tetaplah bernafas.
     </footer>
 </div>
 <!-- ./wrapper -->
