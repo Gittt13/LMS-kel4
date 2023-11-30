@@ -2,7 +2,9 @@
 @section('content')
 
 <header>
-  <h5><b><i class="fa fa-dashboard"></i>Dashboard Admin</b></h5>
+  <h3 class="card-header text-center" style="color: #2B2A4C">
+        {{ __('Selamat Datang Admin') }} {{ auth()->user()->name }}
+    </h3>
   
 </header>
 
@@ -12,8 +14,8 @@
       <div class="card text-center" style="background-color: #3498db; border-radius: 15px; color: white;">
         <div class="card-body">
           <i class="fas fa-users" style="font-size: 90px;"></i>
-          <h3>Data Mahasiswa</h3>
-          <h3>Total: 100</h3>
+          <h3>Mahasiswa</h3>
+          <h3>Total: 30</h3>
           <a href="#" class="btn btn-light mt-3">More Info</a>
         </div>
       </div>
@@ -24,8 +26,8 @@
       <div class="card text-center" style="background-color: #2ecc71; border-radius: 15px; color: white;">
         <div class="card-body">
           <i class="fas fa-graduation-cap" style="font-size: 90px;"></i>
-          <h3>Data Jurusan Kuliah </h3>
-          <h3>Total: 10</h3>
+          <h3>Dosen Pengajar</h3>
+          <h3>Total: 80</h3>
           <a href="#" class="btn btn-light mt-3">More Info</a>
         </div>
       </div>
@@ -35,8 +37,8 @@
       <div class="card text-center" style="background-color: #e74c3c; border-radius: 15px; color: white;">
         <div class="card-body">
           <i class="fas fa-book" style="font-size: 90px;"></i>
-          <h3>Data Mata Kuliah</h3>
-          <h3>Total: 50</h3>
+          <h3>Jurusan</h3>
+          <h3>Total: 8</h3>
           <a href="#" class="btn btn-light mt-3">More Info</a>
         </div>
       </div>
@@ -46,14 +48,14 @@
       <div class="card text-center" style="background-color: #f39c12; border-radius: 15px; color: white;">
         <div class="card-body">
           <i class="fas fa-user-graduate" style="font-size: 68px;"></i>
-          <h3>Data Mahasiswa Perjurusan</h3>
-          <h3>Total: 30</h3>
+          <h3>Mata Kuliah</h3>
+          <h3>Total: 24</h3>
           <a href="#" class="btn btn-light mt-2">More Info</a>
         </div>
       </div>
     </div>
 
-    <div class="col-md-3 mt-3">
+    {{-- <div class="col-md-3 mt-3">
       <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
         <div class="card-body">
           <i class="fas fa-users" style="font-size: 50px; float: left; margin-right: 10px;"></i>
@@ -90,7 +92,7 @@
           <h5>Total Pengunjung</h5>
           <h5>Total: 5</h5>
         </div>
-      </div>
+      </div> --}}
     </div>
 
     <!-- Grafik -->

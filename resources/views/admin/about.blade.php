@@ -6,9 +6,9 @@
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-8 offset-md-2 text-center">
-      <h2 class="mb-4">Selamat Datang di Dashboard Admin</h2>
+      <h2 class="mb-4">Selamat Datang di Halaman Admin</h2>
       <p>
-        Dashboard ini merupakan pusat kendali untuk mengelola semua data mahasiswa, jurusan, mata kuliah, dan informasi penting lainnya di institusi pendidikan ini.
+        Halaman ini merupakan pusat kendali untuk mengelola semua data mahasiswa, jurusan, mata kuliah, dan informasi penting lainnya di institusi pendidikan ini.
       </p>
       <img src="https://png.pngtree.com/png-clipart/20230409/original/pngtree-admin-and-customer-service-job-vacancies-png-image_9041264.png" alt="Admin Dashboard" class="img-fluid ">
 

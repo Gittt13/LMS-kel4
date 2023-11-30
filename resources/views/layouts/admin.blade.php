@@ -75,6 +75,19 @@
             </div>
           </li>
 
+          <!-- Chat Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="fa fa-comments"></i> <!-- Icon chat -->
+            </a>
+            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+              <a href="#" class="dropdown-item">Chat 1</a>
+              <a href="#" class="dropdown-item">Chat 2</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">Open Chat Window</a>
+            </div>
+          </li>
+
           <!-- User Dropdown Menu -->
           <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
@@ -89,18 +102,7 @@
             </div>
           </li>
 
-          <!-- Chat Dropdown Menu -->
-          <li class="nav-item dropdown">
-            <a class="nav-link" data-toggle="dropdown" href="#">
-              <i class="fa fa-comments"></i> <!-- Icon chat -->
-            </a>
-            <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-              <a href="#" class="dropdown-item">Chat 1</a>
-              <a href="#" class="dropdown-item">Chat 2</a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item">Open Chat Window</a>
-            </div>
-          </li>
+          
         </ul>
     </nav>
 
@@ -113,7 +115,7 @@
     </li> --}}
     </ul>
 
-    <!-- SEARCH FORM -->
+    {{-- <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
       <div class="input-group input-group-sm">
         <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
@@ -123,7 +125,7 @@
           </button>
         </div>
       </div>
-    </form>
+    </form> --}}
     </nav>
     <!-- /.navbar -->
 
@@ -132,7 +134,7 @@
       <!-- Brand Logo -->
       <a href="{{ route('home') }}" class="brand-link">
         <img src="{{ Config::get('settings.logo') }}" alt="{{ Config::get('settings.name') }}" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">{{ Config::get('settings.name') }} <span class="right badge badge-danger">beta</span></span>
+        <span class="brand-text font-weight-light">{{ Config::get('settings.name') }} <span class="right badge badge-danger">KELOMPOK 4</span></span>
       </a>
 
       <!-- Sidebar -->
@@ -320,14 +322,14 @@
     </div>
     <!-- /.content-wrapper -->
 
-    <!-- Control Sidebar -->
+    {{-- <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
       <!-- Control sidebar content goes here -->
       <div class="p-3">
         <h5>Title</h5>
         <p>Sidebar content</p>
       </div>
-    </aside>
+    </aside> --}}
     <!-- /.control-sidebar -->
 
     <!-- Main Footer -->
