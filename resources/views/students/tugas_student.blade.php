@@ -17,7 +17,7 @@
     <thead class="table-dark">
       <tr>
         <th scope="col">#</th>
-        <th scope="col">Nama Siswa</th>
+        <th scope="col">Pelajaran</th>
         <th scope="col">Tugas</th>
         <th scope="col">Status</th>
       </tr>
@@ -25,19 +25,19 @@
     <tbody>
       <tr data-status="assigned">
         <th scope="row">1</th>
-        <td>John Doe</td>
+        <td>Matematila</td>
         <td>Mengerjakan Latihan Matematika</td>
         <td><span class="badge badge-primary">Ditugaskan</span></td>
       </tr>
       <tr data-status="pending">
         <th scope="row">2</th>
-        <td>Jane Doe</td>
+        <td>Bahasa Inggris</td>
         <td>Menulis Esai Bahasa Inggris</td>
         <td><span class="badge badge-warning">Belum Diserahkan</span></td>
       </tr>
       <tr data-status="completed">
         <th scope="row">3</th>
-        <td>Bob Smith</td>
+        <td>Ilmu Pengetahuan Alam</td>
         <td>Proyek Ilmu Pengetahuan Alam</td>
         <td><span class="badge badge-success">Selesai</span></td>
       </tr>

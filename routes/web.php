@@ -61,8 +61,8 @@ Route::get('/welcome', function () {
 
 // Awal Route Student
 Route::get('/student', function () {
-    return view('students.student');
-})->name('student');
+    return view('students.home_student');
+})->name('home.student');
 
 Route::get('/student/home', function () {
     return view('students.home_student');

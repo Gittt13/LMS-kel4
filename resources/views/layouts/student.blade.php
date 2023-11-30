@@ -110,7 +110,7 @@
                             <a href="{{ route('tugas') }}" class="nav-link {{ is_active('tugas') }}">
                                 <i class="fa-solid fa-file"></i>
                                 <p>
-                                    {{ __('Tugas') }}
+                                    {{ __('Daftar tugas') }}
                                 </p>
                             </a>
                         </li>
@@ -220,7 +220,8 @@
                 {{ Config::get('settings.name') }}
             </div>
             <!-- Default to the left -->
-            <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="https://www.instagram.com/nhurulanam/">Kelompok 4 MSIB Gamelab</a>.</strong> frontend design
+            <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="https://www.instagram.com/nhurulanam/">Kelompok 4 MSIB Gamelab</a>.</strong> All rights reserved.
+    </footer>
         </footer>
     </div>
     <!-- ./wrapper -->
