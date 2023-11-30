@@ -19,6 +19,34 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @yield('styles')
     @include('includes.analytics')
+
+    <style>
+    .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .main-sidebar {
+        position: fixed;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .content-wrapper {
+        margin-top: 56px; /* Sesuaikan dengan tinggi navbar */
+        margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+    }
+    .sidebar{
+        position: fixed;
+    }
+    #logo{
+        position: fixed;
+    }
+</style>
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -64,7 +92,7 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4" id="logo">
             <!-- Brand Logo -->
             <a href="{{ route('home') }}" class="brand-link">
                 <img src="{{ Config::get('settings.logo') }}" alt="{{ Config::get('settings.name') }}"
