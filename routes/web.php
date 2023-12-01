@@ -82,7 +82,7 @@ Route::get('/student/nilai', function () {
 // Akhir Route Student
 
 
-// ROUTE ADMIN
+// OPEN ROUTE ADMIN
 Route::get('/admin.dashboard', 'DashboardController@index')->name('admin.dashboard');
 // Route::get('/stream', 'StreamController@index')->name('stream');
 Route::get('/admin.about', 'AboutController@index')->name('admin.about');
@@ -93,8 +93,25 @@ Route::get('/admin.data-dosen', 'DataDosenController@index')->name('admin.data-d
 Route::get('/admin.reports', 'ReportsController@index')->name('admin.reports');
 Route::get('/admin.settings', 'SettingsController@index')->name('admin.settings');
 
+// Daftar Jurusan
+// Route::get('/daftar-jurusan', 'JurusanController@index')->name('daftarJurusan');
+// Route::get('/jurusan/create', 'JurusanController@create')->name('createJurusan');
+// Route::post('/jurusan/create', 'JurusanController@store')->name('storeJurusan');
+// Route::get('/jurusan/{jurusan}/edit', 'JurusanController@edit')->name('editJurusan');
+// Route::post('/jurusan/{jurusan}/edit', 'JurusanController@update')->name('updateJurusan');
+// Route::delete('/jurusan/{jurusan}/delete', 'JurusanController@destroy')->name('deleteJurusan');
 
-// ROUTE ADMIN
+// // Daftar Mata Kuliah
+// Route::get('/daftar-mapel', 'MataPelajaranController@index')->name('daftarMapel');
+// Route::get('/mapel/create', 'MataPelajaranController@create')->name('createMapel');
+// Route::post('/mapel/create', 'MataPelajaranController@store')->name('storeMapel');
+// Route::get('/mapel/{mapel}/edit', 'MataPelajaranController@edit')->name('editMapel');
+// Route::post('/mapel/{mapel}/edit', 'MataPelajaranController@update')->name('updateMapel');
+// Route::delete('/mapel/{mapel}/delete', 'MataPelajaranController@destroy')->name('deleteMapel');
+
+
+
+// CLOSE ROUTE ADMIN
 
 // Route teacher
 
