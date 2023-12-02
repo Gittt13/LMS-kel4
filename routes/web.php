@@ -61,23 +61,23 @@ Route::get('/welcome', function () {
 
 // Awal Route Student
 Route::get('/student', function () {
-    return view('students.home_student');
-})->name('home.student');
+    return view('students.home');
+})->name('home');
 
 Route::get('/student/home', function () {
-    return view('students.home_student');
-})->name('home.student');
+    return view('students.home');
+})->name('home');
 
 Route::get('/student/kalender', function () {
-    return view('students.kalender_student');
+    return view('students.kalender');
 })->name('kalender');
 
 Route::get('/student/tugas', function () {
-    return view('students.tugas_student');
+    return view('students.tugas');
 })->name('tugas');
 
 Route::get('/student/nilai', function () {
-    return view('students.nilai_student');
+    return view('students.nilai');
 })->name('nilai');
 // Akhir Route Student
 
