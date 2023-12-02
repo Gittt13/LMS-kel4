@@ -9,7 +9,7 @@
             
             <!-- Dashboard -->
             <div class="card-deck">
-                <a href="link_to_forum" class="card text-center" style="background-color: #427D9D; border-radius: 15px; color: white; height: 75px;">
+                <a href="{{ route('kelas') }}" class="card text-center" style="background-color: #427D9D; border-radius: 15px; color: white; height: 75px;">
                     <div class="card-body d-flex flex-column align-items-center justify-content-center">
                         <ion-icon name="chatbubble-outline" style="font-size: 25px;"></ion-icon>
                         <h5 style="font-size: small;">Forum</h5>
@@ -36,23 +36,43 @@
                     <h4>Nama Kelas</h4>
                 </div>
             </div>
-            <form class="mt-4">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Sampaikan Materi" aria-label="Sampaikan Materi" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">Kirim</button>
-                    </div>
-                </div>
-            </form>
-
-            <!-- Card for the content -->
-            <div class="card mt-4">
-                <div class="card-body text-center">
-                    <ion-icon name="layers-outline" style="font-size: 80px;"></ion-icon>
-                    <p>Anda belum mengupload apapun.</p>
-                </div>
+            <div>
+                <!-- Form Upload Tugas -->
+                    <!-- <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="file" class="mb-1">Unggah Tugas</label>
+                            <input type="file" class="form-control" id="file" name="file" required>
+                        </div>
+                        <button type="button" onclick="uploadFile()" class="btn btn-primary">Upload</button>
+                    </form> -->
+                    <!-- End Form Upload Tugas -->
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+<!-- <script>
+    function uploadFile() {
+        // Mendapatkan elemen input file
+        var fileInput = document.getElementById('file');
+
+        // Mengecek apakah file dipilih
+        if (fileInput.files.length > 0) {
+            // Mendapatkan file yang dipilih
+            var file = fileInput.files[0];
+
+            // Lakukan pengolahan atau pengiriman ke server di sini
+            // Untuk contoh, kita hanya menampilkan informasi file
+            console.log('File Name:', file.name);
+            console.log('File Size:', file.size);
+            console.log('File Type:', file.type);
+
+            // Reset formulir setelah upload
+            document.getElementById('uploadForm').reset();
+        } else {
+            alert('Silakan pilih file terlebih dahulu.');
+        }
+    }
+</script> -->
+
