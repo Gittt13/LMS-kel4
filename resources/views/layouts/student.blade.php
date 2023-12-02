@@ -40,9 +40,6 @@
         margin-top: 56px; /* Sesuaikan dengan tinggi navbar */
         margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
     }
-    .sidebar{
-        position: fixed;
-    }
     #logo{
         position: fixed;
     }
