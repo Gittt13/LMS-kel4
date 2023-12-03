@@ -18,14 +18,13 @@
     <style>
     .navbar {
         position: fixed;
-        width: 100%;
     }
 
     .main-sidebar {
         position: fixed;
         height: 100%;
     }
-    
+
     #logo{
         position: fixed;
     }
