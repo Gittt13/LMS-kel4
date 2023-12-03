@@ -1,66 +1,61 @@
 @extends('layouts.admin')
 @section('content')
 
-
-
-<div class="bg-white p-10">
-  <div class="container-fluid">
-    <h3 class="card-header text-center">
-      {{ __('Selamat Datang Admin') }} {{ auth()->user()->name }}
-    </h3>
-  </div>
+<div class="container mt-1">
+  <div class="container-fluid "></div>
+  <h3 class="card-header mb-5 text-center " style="font-size: 40px; font-family: 'Noto Sans JP', sans-serif;">
+    {{ __('Sugeng Rawuh Hokage') }} {{ auth()->user()->name }}
+  </h3>
 </div>
-  
+</div>
 
-
-<div class="container mt-4">
-  <div class="row">
-    <div class="col-md-3">
-      <div class="card text-center" style="background-color: #3498db; border-radius: 15px; color: white;">
-        <div class="card-body">
-          <i class="fas fa-users" style="font-size: 90px;"></i>
-          <h3>Mahasiswa</h3>
-          <h3>Total: 30</h3>
-          <a href="#" class="btn btn-light mt-3">More Info</a>
-        </div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="card text-center" style="background-color: #3498db; border-radius: 15px; color: white;">
+      <div class="card-body">
+        <i class="fas fa-users" style="font-size: 90px;"></i>
+        <h3>Mahasiswa</h3>
+        <h3>Total: 30</h3>
+        <a href="#" class="btn btn-light mt-3">More Info</a>
       </div>
     </div>
+  </div>
 
 
-    <div class="col-md-3">
-      <div class="card text-center" style="background-color: #2ecc71; border-radius: 15px; color: white;">
-        <div class="card-body">
-          <i class="fas fa-graduation-cap" style="font-size: 90px;"></i>
-          <h3>Dosen Pengajar</h3>
-          <h3>Total: 80</h3>
-          <a href="#" class="btn btn-light mt-3">More Info</a>
-        </div>
+  <div class="col-md-3">
+    <div class="card text-center" style="background-color: #2ecc71; border-radius: 15px; color: white;">
+      <div class="card-body">
+        <i class="fas fa-graduation-cap" style="font-size: 90px;"></i>
+        <h3>Dosen Pengajar</h3>
+        <h3>Total: 80</h3>
+        <a href="#" class="btn btn-light mt-3">More Info</a>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-3">
-      <div class="card text-center" style="background-color: #e74c3c; border-radius: 15px; color: white;">
-        <div class="card-body">
-          <i class="fas fa-book" style="font-size: 90px;"></i>
-          <h3>Jurusan</h3>
-          <h3>Total: 8</h3>
-          <a href="#" class="btn btn-light mt-3">More Info</a>
-        </div>
+  <div class="col-md-3">
+    <div class="card text-center" style="background-color: #e74c3c; border-radius: 15px; color: white;">
+      <div class="card-body">
+        <i class="fas fa-book" style="font-size: 90px;"></i>
+        <h3>Jurusan</h3>
+        <h3>Total: 8</h3>
+        <a href="#" class="btn btn-light mt-3">More Info</a>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-3">
-      <div class="card text-center" style="background-color: #f39c12; border-radius: 15px; color: white;">
-        <div class="card-body">
-          <i class="fas fa-user-graduate" style="font-size: 90px;"></i>
-          <h3>Mata Kuliah</h3>
-          <h3>Total: 24</h3>
-          <a href="#" class="btn btn-light mt-3">More Info</a>
-        </div>
+  <div class="col-md-3">
+    <div class="card text-center" style="background-color: #f39c12; border-radius: 15px; color: white;">
+      <div class="card-body">
+        <i class="fas fa-user-graduate" style="font-size: 90px;"></i>
+        <h3>Mata Kuliah</h3>
+        <h3>Total: 24</h3>
+        <a href="#" class="btn btn-light mt-3">More Info</a>
       </div>
     </div>
+  </div>
 
-    {{-- <div class="col-md-3 mt-3">
+  {{-- <div class="col-md-3 mt-3">
       <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
         <div class="card-body">
           <i class="fas fa-users" style="font-size: 50px; float: left; margin-right: 10px;"></i>
@@ -98,9 +93,9 @@
           <h5>Total: 5</h5>
         </div>
       </div> --}}
-  </div>
+</div>
 
-  <!-- OPEN Grafik -->
+<!-- OPEN Grafik -->
 <div class="grafik">
   <div class="row">
     <div class="col-md-6 mt-5">
@@ -125,50 +120,50 @@
 </div>
 <!-- END GRAFIK -->
 
-  
 
-  
 
-  <!-- Kalender Kegiatan -->
-  <div class="col-md-4 mt-3">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">Kalender Kegiatan</h2>
-        <div id="calendar"></div>
-      </div>
+
+
+<!-- Kalender Kegiatan -->
+<div class="col-md-4 mt-3">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Kalender Kegiatan</h2>
+      <div id="calendar"></div>
     </div>
   </div>
+</div>
 
-  {{-- Data Mahasiswa --}}
-  <div class="col-md-12 mt-5">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">Data Mahasiswa
-        </h2>
-        <canvas id="myChart" width="400" height="200"></canvas>
-      </div>
+{{-- Data Mahasiswa --}}
+<div class="col-md-12 mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Data Mahasiswa
+      </h2>
+      <canvas id="myChart" width="400" height="200"></canvas>
     </div>
   </div>
+</div>
 
-  {{-- Data Jurusan --}}
-  <div class="col-md-12 mt-5">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">Data Jurusan</h2>
-        <canvas id="myChart" width="400" height="200"></canvas>
-      </div>
+{{-- Data Jurusan --}}
+<div class="col-md-12 mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Data Jurusan</h2>
+      <canvas id="myChart" width="400" height="200"></canvas>
     </div>
   </div>
+</div>
 
-  {{-- Data Dosen Pengajar --}}
-  <div class="col-md-12 mt-5">
-    <div class="card">
-      <div class="card-body">
-        <h2 class="card-title">Data Dosen Pelajaran</h2>
-        <canvas id="myChart" width="400" height="200"></canvas>
-      </div>
+{{-- Data Dosen Pengajar --}}
+<div class="col-md-12 mt-5">
+  <div class="card">
+    <div class="card-body">
+      <h2 class="card-title">Data Dosen Pelajaran</h2>
+      <canvas id="myChart" width="400" height="200"></canvas>
     </div>
   </div>
+</div>
 
 </div>
 </div>
@@ -186,37 +181,36 @@
 <!-- perbandiangan mahasiswa -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-  var ctx = document.getElementById('diagram2').getContext('2d');
-  var perbandinganChart = new Chart(ctx, {
-    type: 'doughnut',
-    data: {
-      labels: ['Teknik Mesin', 'Teknik Kimia', 'Teknik Elektro', 'Teknik Komputer', 'Teknik Sipil'],
-      datasets: [{
-        data: [80, 50, 30, 20, 70], // Ganti dengan data yang sesuai
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.7)',
-          'rgba(54, 162, 235, 0.7)',
-          'rgba(255, 206, 86, 0.7)',
-          'rgba(75, 192, 192, 0.7)',
-          'rgba(153, 102, 255, 0.7)',
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 0.7)',
-          'rgba(54, 162, 235, 0.7)',
-          'rgba(255, 206, 86, 0.7)',
-          'rgba(75, 192, 192, 0.7)',
-          'rgba(153, 102, 255, 0.7)',
-        ],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      cutoutPercentage: 50,
-      responsive: true
-    },
+    var ctx = document.getElementById('diagram2').getContext('2d');
+    var perbandinganChart = new Chart(ctx, {
+      type: 'doughnut'
+      , data: {
+        labels: ['Teknik Mesin', 'Teknik Kimia', 'Teknik Elektro', 'Teknik Komputer', 'Teknik Sipil']
+        , datasets: [{
+          data: [80, 50, 30, 20, 70], // Ganti dengan data yang sesuai
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.7)'
+            , 'rgba(54, 162, 235, 0.7)'
+            , 'rgba(255, 206, 86, 0.7)'
+            , 'rgba(75, 192, 192, 0.7)'
+            , 'rgba(153, 102, 255, 0.7)'
+          , ]
+          , borderColor: [
+            'rgba(255, 99, 132, 0.7)'
+            , 'rgba(54, 162, 235, 0.7)'
+            , 'rgba(255, 206, 86, 0.7)'
+            , 'rgba(75, 192, 192, 0.7)'
+            , 'rgba(153, 102, 255, 0.7)'
+          , ]
+          , borderWidth: 1
+        }]
+      }
+      , options: {
+        cutoutPercentage: 50
+        , responsive: true
+      }
+    , });
   });
-});
-
 
 </script>
 

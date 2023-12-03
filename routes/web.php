@@ -90,6 +90,7 @@ Route::get('/student/home/detail', function () {
 Route::get('/admin.dashboard', 'DashboardController@index')->name('admin.dashboard');
 // Route::get('/stream', 'StreamController@index')->name('stream');
 Route::get('/admin.about', 'AboutController@index')->name('admin.about');
+Route::get('/admin.profile', 'ProfileController@index')->name('admin.profile');
 Route::get('/admin.data-jurusan', 'DataJurusanController@index')->name('admin.data-jurusan');
 Route::get('/admin.data-mata-Kuliah', 'DataMataKuliahController@index')->name('admin.data-mata-kuliah');
 Route::get('/admin.data-mahasiswa', 'DataMahasiswaController@index')->name('admin.data-mahasiswa');
