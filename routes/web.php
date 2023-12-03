@@ -133,5 +133,5 @@ Route::get('/admin.settings', 'SettingsController@index')->name('admin.settings'
 
         Route::get('/teacher/kelas/tugas', function () {
             return view('teacher.tugas_teacher');
-        })->name('tugas');
+        })->name('tugas.teacher');
 // Route teacher
