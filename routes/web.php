@@ -66,7 +66,7 @@ Route::get('/student', function () {
 
 Route::get('/student/home', function () {
     return view('students.home');
-})->name('home');
+})->name('home-student');
 
 Route::get('/student/kalender', function () {
     return view('students.kalender');
@@ -134,4 +134,8 @@ Route::get('/admin.settings', 'SettingsController@index')->name('admin.settings'
         Route::get('/teacher/absensi', function () {
             return view('teacher.absensi_teacher');
         })->name('absensi');
+
+        Route::get('/teacher/kelas/tugas', function () {
+            return view('teacher.tugas_teacher');
+        })->name('tugas');
 // Route teacher

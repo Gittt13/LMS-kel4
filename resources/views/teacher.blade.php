@@ -5,7 +5,9 @@
 <div class="container mt-5">
     <div class="card">
         <div class="card-header bg-primary text-white text-center">
-            <h1 class="mb-0"><i class="fas fa-chalkboard-teacher"></i> Selamat Datang, Guru!</h1>
+        <h1 class="card-header text-center">
+                {{ __('Selamat Datang') }} {{ auth()->user()->name }}
+            </h1>
         </div>
     </div>
 
