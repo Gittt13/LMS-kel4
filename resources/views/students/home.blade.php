@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Pelajaran 1</h5>
                     <p class="card-text">Nama Guru 1</p>
-                    <a href="#" class="btn btn-primary">Detail</a>
+                    <a href="{{ route('detail') }}" class="btn btn-primary {{ is_active('detail') }}">{{ __('Detail') }}</a>
                 </div>
             </div>
         </div>
