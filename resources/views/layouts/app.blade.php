@@ -43,8 +43,12 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
                         <!-- Authentication Links -->
                         @guest
+                        <span class="navbar-text mr-3" style="color:#F3EEEA; font-family: 'Poppins', sans-serif; ">
+                        Silahkan login atau daftar akun
+                        </span>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}" style="color:#F3EEEA; font-family: 'Poppins', sans-serif;">{{ __('Login') }}</a>
                             </li>

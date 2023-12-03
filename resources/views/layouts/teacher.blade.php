@@ -31,6 +31,42 @@
     }
 </style>
 </head>
+<style>
+.dropbtn {
+  background-color: #427D9D;
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+/* .dropdown {
+  position: relative;
+  display: inline-block;
+} */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #164863;}
+</style>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper " id="app">
 
@@ -46,18 +82,24 @@
                 <i class="nav-icon fas fa-home"></i> {{ __('Home') }}
             </a>
         </li>
-
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ route('stream') }}" class="nav-link  {{ is_active('stream') }}">
-                <i class="nav-icon fas fa-play"></i>
-                {{ __('Stream') }}
-                <span class="right badge badge-danger">New</span>
-            </a>
-        </li>
     </ul>
 
+    <!-- bagian button add -->
+    <div class="dropdown d-flex flex-row-reverse justify-content-end">
+        <button class="dropbtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+            </svg>
+        </button>
+            <div class="dropdown-content">
+                <a href="#">Tambah Peserta</a>
+                <a href="#">Lihat Peserta</a>
+            </div>
+    </div>
+    
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    <form class="form-inline ml-auto">
         <div class="input-group input-group-sm">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -99,7 +141,7 @@
                         <a href="{{ route('home.teacher') }}" class="nav-link {{ is_active('home') }}">
                             <i class="nav-icon fas fa-home"></i>
                             <p>
-                                {{ __('Home') }}
+                                {{ __('Dashboard') }}
                             </p>
                         </a>
                     </li>
