@@ -15,6 +15,21 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @yield('styles')
     @include('includes.analytics')
+    <style>
+    .navbar {
+        position: fixed;
+        width: 100%;
+    }
+
+    .main-sidebar {
+        position: fixed;
+        height: 100%;
+    }
+    
+    #logo{
+        position: fixed;
+    }
+</style>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper " id="app">
@@ -56,7 +71,7 @@
 <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4 fixed-top">
+    <aside class="main-sidebar sidebar-dark-primary elevation-4" id="logo">
         <!-- Brand Logo -->
         <a href="{{ route('home') }}" class="brand-link">
             <img src="{{  Config::get('settings.logo') }}" alt="{{  Config::get('settings.name') }}" class="brand-image img-circle elevation-3"

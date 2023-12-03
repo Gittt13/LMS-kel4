@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container mt-5">
+<div class="container mt-4">
     <div class="card">
         <div class="card-header bg-primary text-white text-center">
             <h1 class="mb-0">Data Absensi Murid</h1>

@@ -3,7 +3,7 @@
 @section('content')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha384-rB5lOXDLcYZ+tiQ3+O1aP10I1cZPWe0A9lE9FLVxThAJI1ktbb5C6IMFAdAMQpeK" crossorigin="anonymous">
 
-<div class="container mt-5">
+<div class="container mt-4">
     <div class="card">
         <div class="card-header bg-primary text-white text-center">
             <h1 class="card-header text-center">
