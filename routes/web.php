@@ -66,7 +66,7 @@ Route::get('/student', function () {
 
 Route::get('/student/home', function () {
     return view('students.home');
-})->name('home');
+})->name('home-student');
 
 Route::get('/student/kalender', function () {
     return view('students.kalender');
