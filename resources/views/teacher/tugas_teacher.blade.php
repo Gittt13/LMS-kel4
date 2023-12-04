@@ -3,11 +3,12 @@
 @section('content')
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<div class="container mt-4">
+<div class="container mt-5">
     <div class="row">
         <div class="col-md-11 mx-auto"> 
             
             <!-- Dashboard -->
+            
             <div class="card-deck">
                 <a href="{{ route('kelas') }}" class="card text-center" style="background-color: #427D9D; border-radius: 15px; color: white; height: 75px;">
                     <div class="card-body d-flex flex-column align-items-center justify-content-center">
@@ -28,51 +29,92 @@
                     </div>
                 </a>
             </div>
-            <!-- Dashboard -->
-
+            <!-- End Dashboard -->
             <div class="card text-center" style="background-color: #164863; border-radius: 15px; color: white; height: 170px;">
                 <div class="card-body d-flex flex-column align-items-center justify-content-center">
                     <ion-icon name="book-outline" style="font-size: 80px;"></ion-icon>
                     <h4>Nama Kelas</h4>
                 </div>
             </div>
-            <div>
-                <!-- Form Upload Tugas -->
-                    <!-- <form id="uploadForm" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <label for="file" class="mb-1">Unggah Tugas</label>
-                            <input type="file" class="form-control" id="file" name="file" required>
-                        </div>
-                        <button type="button" onclick="uploadFile()" class="btn btn-primary">Upload</button>
-                    </form> -->
-                    <!-- End Form Upload Tugas -->
+
+
+            <div class="mt-4">
+                <!-- Tombol Tampilkan Form Upload Tugas -->
+                <button class="btn btn-primary mt-3" onclick="toggleUploadForm()">Upload Tugas</button>
+                
+                <!-- Form Upload Tugas (Awalnya Disembunyikan) -->
+                <div class="card" id="uploadFormCard" style="display: none;">
+                    <div class="card-body">
+                        <h5 class="card-title">Unggah Tugas</h5>
+                        <form id="uploadForm" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label for="title">Judul Tugas</label>
+                                <input type="text" class="form-control" id="title" name="title" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="file" class="mb-1">Unggah File Tugas</label>
+                                <input type="file" class="form-control" id="file" name="file" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="dueDate">Batas Waktu</label>
+                                <input type="datetime-local" class="form-control" id="dueDate" name="dueDate" required>
+                            </div>
+                            <button type="button" onclick="uploadFile()" class="btn btn-primary">Unggah Tugas</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- End Form Upload Tugas -->
+
+                <!-- Tugas yang Diunggah -->
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Tugas yang Diunggah</h5>
+                        <ul id="uploadedTasksList">
+                            <!-- Daftar tugas yang diunggah akan ditampilkan di sini -->
+                        </ul>
+                    </div>
+                </div>
+                <!-- End Tugas yang Diunggah -->
             </div>
         </div>
     </div>
 </div>
 @endsection
 
-<!-- <script>
-    function uploadFile() {
-        // Mendapatkan elemen input file
-        var fileInput = document.getElementById('file');
-
-        // Mengecek apakah file dipilih
-        if (fileInput.files.length > 0) {
-            // Mendapatkan file yang dipilih
-            var file = fileInput.files[0];
-
-            // Lakukan pengolahan atau pengiriman ke server di sini
-            // Untuk contoh, kita hanya menampilkan informasi file
-            console.log('File Name:', file.name);
-            console.log('File Size:', file.size);
-            console.log('File Type:', file.type);
-
-            // Reset formulir setelah upload
-            document.getElementById('uploadForm').reset();
+<script>
+    function toggleUploadForm() {
+        var uploadFormCard = document.getElementById('uploadFormCard');
+        if (uploadFormCard.style.display === 'none') {
+            uploadFormCard.style.display = 'block';
         } else {
-            alert('Silakan pilih file terlebih dahulu.');
+            uploadFormCard.style.display = 'none';
         }
     }
-</script> -->
 
+    function uploadFile() {
+        // Di sinilah Anda menangani unggahan berkas
+        // Anda dapat menggunakan JavaScript untuk memanipulasi DOM dan menampilkan tugas yang diunggah
+        // Misalnya, Anda dapat menambahkan elemen daftar baru ke dalam uploadedTasksList
+
+        // Dapatkan judul dan nama berkas yang diunggah
+        var title = document.getElementById('title').value;
+        var fileName = document.getElementById('file').value.split('\\').pop();
+
+        // Buat elemen daftar baru
+        var listItem = document.createElement('li');
+        listItem.innerHTML = `<strong>${title}</strong>: ${fileName}`;
+
+        // Buat elemen daftar dapat diklik untuk membuka tugas
+        listItem.addEventListener('click', function() {
+            // Di sini, Anda dapat mengimplementasikan logika untuk membuka tugas yang diunggah
+            // Misalnya, Anda dapat mengalihkan ke halaman baru atau menampilkan konten tugas
+            alert('Buka Tugas: ' + fileName);
+        });
+
+        // Tambahkan elemen daftar ke dalam uploadedTasksList
+        document.getElementById('uploadedTasksList').appendChild(listItem);
+
+        // Reset formulir setelah unggah
+        document.getElementById('uploadForm').reset();
+    }
+</script>

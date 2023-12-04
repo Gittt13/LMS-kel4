@@ -46,7 +46,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <header class="w3-container w3-center" style="padding:128px 16px; background-color:#9BBEC8; font-family: 'Poppins', sans-serif;">
   <h1 class="w3-margin w3-jumbo" style="color:#DDF2FD; font-family: 'Poppins', sans-serif;">Learning Management System</h1>
   <p class="w3-xlarge" style="color:#427D9D;">dummy</p>
-  <button class="w3-button  w3-padding-large w3-large w3-margin-top" style="color:#DDF2FD; background-color:#427D9D;"><a href="">Get Started</a></button>
+  <button class="w3-button  w3-padding-large w3-large w3-margin-top" style="color:#DDF2FD; background-color:#427D9D;"><a href="{{ route('home-student') }}">Get Started</a></button>
 </header>
 
 <!-- First Grid -->
