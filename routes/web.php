@@ -68,6 +68,14 @@ Route::get('/student/home', function () {
     return view('students.home');
 })->name('home-student');
 
+Route::get('/student/profil-student', function () {
+    return view('students.profil_student');
+})->name('profil-student');
+
+Route::get('/student/profil/edit-profil', function () {
+    return view('students.edit_profil');
+})->name('edit-profil');
+
 Route::get('/student/kalender', function () {
     return view('students.kalender');
 })->name('kalender');
