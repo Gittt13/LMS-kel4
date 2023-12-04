@@ -53,9 +53,7 @@
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <!-- <li><a class="getstarted scrollto" href="{{route('login')}}">Get Started</a></li> -->
           @guest
-                        <span class="navbar-text mr-3" style="color:#F3EEEA; font-family: 'Poppins', sans-serif; ">
-                        Silahkan login atau daftar akun
-                        </span>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}" style="color:#F3EEEA; font-family: 'Poppins', sans-serif;">{{ __('Login') }}</a>
                             </li>
@@ -364,9 +362,9 @@
 
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
+          <li data-filter=".filter-app">Kelas Umum</li>
+          <li data-filter=".filter-card">Kelas Programmer</li>
+          <li data-filter=".filter-web">Kelas Tambahan</li>
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
