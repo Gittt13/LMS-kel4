@@ -1,52 +1,119 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-2">
-            <div class="card" style="text-align: center">
-                <div class="card-header" sty>Usuarios</div>
-                <div class="card-body"><div style="font-size: 50px;">{{ $totalUsers }}</div></div>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Bienvenido {{ auth()->user()->name }}</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Welcome</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,800&display=swap" rel="stylesheet">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-coffee {font-size:200px}
+</style>
+</head>
+<body>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<!-- Navbar -->
+<!-- <div class="w3-top">
+  <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Link 4</a>
+  </div> -->
 
-                    <p>
-                        Esta plataforma nace para apoyar a todas aquellas personas que estan aprendiendo Laravel y/o aquellas que quieren aprender conceptos avanzados de desarrollo,
-                        para lograr dicho objetivo estaremos construyendo un proyecto open-source llamado LMS-Laravel, durante el transcurso del desarrollo estaremos aprendiendo los siguientes conceptos:
-                    </p>
-                    <ul>
-                        <li>Principio SOLID</li>
-                        <li>Principio DRY : Don't repeat yourself</li>
-                        <li>Patron Repositorio</li>
-                        <li>Patron Estrategia</li>
-                        <li>Arquitectura Limpia</li>
-                        <li>Pruebas Unitarias</li>
-                        <li>Desarrollo basado en contratos</li>
-                        <li>Principio "Object Parameter"</li>
-                        <li>Git Flow & Feature Flags</li>
-                        <li>Desarrollo Modular</li>
-                    </ul>
-
-                    <p>La metodologia de trabajo sera muy simple, se realizaran talleres via streaming de Lunes a Sabado, la duracion de cada taller sera de 2 horas hasta tener una version 1.0 del LMS.</p>
-                    <p>Este sitio web se ira actualizando a medida que el LMS se vaya desarrollando, la idea principal es convertir esta experiencia en un laboratio real en donde se vayan viendo los resultados del dia a dia y que todos podamos aportar para el desarrollo del LMS.</p>
-                    <p>A cada usuario internamente se le asiganara un codigo de seguridad, esto con el fin de que solo los usuarios registrados puedan ver los streaming y mas adelante solo se podra mantener una sesion abierta por dispositvo.</p>
-                    <p>SOLICITUD: Estoy tratando de brindar una experiencia educativa diferente a lo que regularmente se hace asi que espero poder contar con tu apoyo a la hora de difundir esta idea.</p>
-                    <p>Si quieres realizar una donacion para apoyar el sitio web y su contenido no dudes en escribirme a <a href="mailto:akurten@angelkurten.com">akurten@angelkurten.com</a></p>
-                    <h1>Fecha inicio: 01-Agosto-2019</h1>
-                </div>
-                <div class="fb-comments" data-href="{{ Request::url()}}" data-order-by="social" data-width="100%" data-numposts="10"></div>
-            </div>
-        </div>
-    </div>
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+  </div>
 </div>
+
+<!-- Header -->
+<header class="w3-container w3-center" style="padding:128px 16px; background-color:#9BBEC8; font-family: 'Poppins', sans-serif;">
+  <h1 class="w3-margin w3-jumbo" style="color:#DDF2FD; font-family: 'Poppins', sans-serif;">Learning Management System</h1>
+  <p class="w3-xlarge" style="color:#427D9D;">dummy</p>
+  <button class="w3-button  w3-padding-large w3-large w3-margin-top" style="color:#DDF2FD; background-color:#427D9D;"><a href="{{ route('home-student') }}">Get Started</a></button>
+</header>
+
+<!-- First Grid -->
+<div class="w3-row-padding w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <div class="w3-third w3-center">
+      <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-third w3-center">
+      <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+    </div>
+
+    <div class="w3-twothird">
+      <h1>Lorem Ipsum</h1>
+      <h5 class="w3-padding-32">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+
+      <p class="w3-text-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+        laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+  </div>
+</div>
+
+<div class="w3-container w3-center w3-opacity w3-padding-64" style="color:#DDF2FD; background-color:#164863;">
+    <h1 class="w3-margin w3-xlarge" style="font-family: 'Poppins', sans-serif;">Quote Of The Day : <br> Tetap bernapas dan hidup lah seperti Larry</h1>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity">  
+  <div class="w3-xlarge w3-padding-32">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+ </div>
+ <p>Powered by <a href="https://www.linkedin.com/in/muhammad-anggit-b83772262/" target="_blank">Gamelab Kel4</a></p>
+</footer>
+
+<script>
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
 @endsection
