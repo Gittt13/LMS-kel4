@@ -116,7 +116,7 @@
                         data-accordion="false">
 
                         <li class="nav-item has-treeview ">
-                            <a href="{{ route('home') }}" class="nav-link {{ is_active('home') }}">
+                            <a href="{{ route('home-student') }}" class="nav-link {{ is_active('home') }}">
                                 <i class="fa-solid fa-house"></i>
                                 <p>
                                     {{ __('Home') }}
