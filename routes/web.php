@@ -175,4 +175,17 @@ Route::get('/admin/peserta-kelas/halaman', 'PesertaKelasController@index')->name
         Route::get('/teacher/kelas/tugas', function () {
             return view('teacher.tugas_teacher');
         })->name('tugas.teacher');
+
+        Route::get('/teacher/kalender', function () {
+            return view('teacher.kalender_teacher');
+        })->name('kalender2');
+
+        Route::get('/teacher/anggota', function () {
+            return view('teacher.anggota_teacher');
+        })->name('anggota');
+
+        Route::get('/teacher/nilai', function () {
+            return view('teacher.nilai_teacher');
+        })->name('nilai.teacher');
+// Route teacher
 // Route teacher
