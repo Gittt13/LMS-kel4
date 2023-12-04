@@ -125,7 +125,7 @@
 
 
   <!-- Kalender Kegiatan -->
-  <div class="col-md-4 mt-3">
+  <div class="col-md-7 mt-6">
     <div class="card">
       <div class="card-body">
         <h2 class="card-title">Kalender Kegiatan</h2>

@@ -238,19 +238,19 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="{{ route('admin.data-mahasiswa') }}" class="nav-link {{ is_active('admin.data-mahasiswa') }}">
+                      <a href="{{ route('admin/kelas-umum/halaman') }}" class="nav-link {{ is_active('admin/kelas-umum/halaman') }}">
                         <i class="nav-icon fas fa-user-graduate"></i>
                         <p>Kelas Umum</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{ route('admin.data-dosen') }}" class="nav-link {{ is_active('admin.data-dosen') }}">
+                      <a href="{{ route('admin/kelas-programming/halaman') }}" class="nav-link {{ is_active('admin/kelas-programming/halaman') }}">
                         <i class="nav-icon fas fa-users"></i>
                         <p>Kelas Programming</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{ route('admin.data-jurusan') }}" class="nav-link {{ is_active('admin.data-jurusan') }}">
+                      <a href="{{ route('admin/kelas-tambahan/halaman') }}" class="nav-link {{ is_active('admin/kelas-tambahan/halaman') }}">
                         <i class="nav-icon fas fa-list"></i>
                         <p>Kelas Tambahan</p>
                       </a>
@@ -277,14 +277,13 @@
                   </a>
                   <ul class="nav nav-treeview">
                     <li class="nav-item">
-                      <a href="{{ route('admin.data-mahasiswa') }}" class="nav-link {{ is_active('admin.data-mahasiswa') }}">
+                      <a href="{{ route('admin/instructur-profil/halaman') }}" class="nav-link {{ is_active('admin/instructur-profil/halaman') }}">
                         <i class="nav-icon fas fa-user-graduate"></i>
                         <p>Profil Instructur</p>
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a href="{{ route('admin.data-dosen') }}" class="nav-link {{ is_active('admin.data-dosen') }}">
-                        <i class="nav-icon fas fa-users"></i>
+                      <a href="{{ route('admin/instructur-kelas/halaman') }}" class="nav-link {{ is_active('admin/instructur-kelas/halaman') }}">
                         <p>Kelas Instructur</p>
                       </a>
                     </li>
@@ -295,6 +294,41 @@
               </ul>
             </nav>
             <!-- DROPDOWN Instructur -->
+
+           <!-- DROPDOWN PESERTA-->
+            <nav class="mt-2">
+              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-database"></i>
+                    <p>
+                      Data Peserta
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="{{ route('admin/instructur-profil/halaman') }}" class="nav-link {{ is_active('admin/peserta-profil/halaman') }}">
+                        <i class="nav-icon fas fa-user-graduate"></i>
+                        <p>Profil Peserta</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ route('admin/peserta-kelas/halaman') }}" class="nav-link {{ is_active('admin/peserta-kelas/halaman') }}">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Kelas Peserta</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- Your other menu items -->
+
+              </ul>
+            </nav>
+            <!-- DROPDOWN PESERTA-->
+
+
             
 
             <!-- /.sidebar-menu -->
