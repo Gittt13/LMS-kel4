@@ -479,16 +479,17 @@
 
           <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
             <div class="member d-flex align-items-start">
-              <div class="pic"><img src="/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+              <div class="pic"><img src="/img/team/Anggit.png" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <h4>Muhammad Anggit Pamungkas</h4>
+                <span>Team Leader Projek</span>
+                <p>Ujian yang sulit untuk manusia yaitu, ketika kita harus <br>
+                    memanusiakan manusia yang tidak memanusiakan kita</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
-                  <a href=""><i class="ri-instagram-fill"></i></a>
-                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                  <a href="https://www.instagram.com/manggit5/"><i class="ri-instagram-fill"></i></a>
+                  <a href="https://www.linkedin.com/in/muhammad-anggit-b83772262/"> <i class="ri-linkedin-box-fill"></i> </a>
                 </div>
               </div>
             </div>
