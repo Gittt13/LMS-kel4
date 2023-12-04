@@ -11,6 +11,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel='icon' href='/favicon.ico' type='image/x-icon'>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     {{-- icon --}}
     <script src="https://kit.fontawesome.com/98ac9fd23e.js" crossorigin="anonymous"></script>
@@ -43,6 +45,13 @@
     #logo{
         position: fixed;
     }
+    .btn-add{
+        
+        border-radius: 12px;
+        color: #164863;
+        padding: 4px;
+        border: none;
+    }
 </style>
 </head>
 
@@ -61,16 +70,13 @@
                         <i class="nav-icon fas fa-home"></i> {{ __('Home') }}
                     </a>
                 </li>
-
-                <li class="nav-item d-none d-sm-inline-block">
-                    <a href="{{ route('stream') }}" class="nav-link  {{ is_active('stream') }}">
-                        <i class="nav-icon fas fa-play"></i>
-                        {{ __('Stream') }}
-                        <span class="right badge badge-danger">New</span>
-                    </a>
-                </li>
             </ul>
-
+            <!-- tombol untuk join kelas -->
+            <div class="ml-3">
+                    <a href="{{ route('tambah-kelas') }}">
+                    <ion-icon name="add-circle-sharp" size="large"></ion-icon>
+                    </a>
+            </div>
             <!-- SEARCH FORM -->
             <form class="form-inline ml-3">
                 <div class="input-group input-group-sm">
@@ -116,7 +122,7 @@
                         data-accordion="false">
 
                         <li class="nav-item has-treeview ">
-                            <a href="{{ route('home') }}" class="nav-link {{ is_active('home') }}">
+                            <a href="{{ route('home-student') }}" class="nav-link {{ is_active('home') }}">
                                 <i class="fa-solid fa-house"></i>
                                 <p>
                                     {{ __('Home') }}

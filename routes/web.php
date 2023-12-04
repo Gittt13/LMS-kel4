@@ -83,6 +83,10 @@ Route::get('/student/nilai', function () {
 Route::get('/student/home/detail', function () {
     return view('students.home_detail');
 })->name('detail');
+
+Route::get('/student/tambah-kelas', function () {
+    return view('students.tambah-kelas');
+})->name('tambah-kelas');
 // Akhir Route Student
 
 
