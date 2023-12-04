@@ -102,6 +102,9 @@ Route::get('/admin/instructur-profil/halaman', 'InstructurProfilController@index
 Route::get('/admin/instructur-kelas/halaman', 'InstructurKelasController@index')->name('admin/instructur-kelas/halaman');
 Route::get('/admin/peserta-profil/halaman', 'PesertaProfilController@index')->name('admin/peserta-profil/halaman');
 Route::get('/admin/peserta-kelas/halaman', 'PesertaKelasController@index')->name('admin/peserta-kelas/halaman');
+// 
+// Route ke data Mahasiswa
+Route::get('/admin/mahasiswa/data_peserta', 'DataPesertaController@index')->name('data_peserta');
 
 // Route::get('/admin.reports', 'ReportsController@index')->name('admin.reports');
 // Route::get('/admin.settings', 'SettingsController@index')->name('admin.settings');

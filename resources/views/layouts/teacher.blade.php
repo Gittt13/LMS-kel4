@@ -83,28 +83,44 @@
         </li>
     </ul>
 
-    <!-- bagian button add -->
-    <div class="dropdown d-flex flex-row-reverse justify-content-end">
-        <button class="dropbtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
-                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-                <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
-            </svg>
-        </button>
-            <div class="dropdown-content">
-                <a href="#">Tambah Peserta</a>
-                <a href="#">Lihat Peserta</a>
-            </div>
-    </div>
     
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-auto">
+    <form class="form-inline ml-auto" style="gap: 1rem;">
+        <!-- bagian button Add Peserta -->
+        <div class="dropdown dropleft">
+               <button class="dropbtn">
+                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                       <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                       <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+                   </svg>
+               </button>
+               <div class="dropdown-content" style="left: 0;">
+                   <a href="#">Tambah Peserta</a>
+                   <a href="#">Lihat Peserta</a>
+               </div>
+        </div>
+        <!-- Formnya -->
         <div class="input-group input-group-sm">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
                 <button class="btn btn-navbar" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
+            </div>
+        </div>
+        <!-- lain-lain -->
+        <div class="dropdown open">
+            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                        Dropdown Sized
+                    </button>
+            <div class="dropdown-menu" aria-labelledby="triggerId">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item disabled" href="#">Disabled action</a>
+                <h6 class="dropdown-header">Section header</h6>
+                <a class="dropdown-item" href="#">Action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">After divider action</a>
             </div>
         </div>
     </form>
@@ -117,7 +133,7 @@
         <a href="{{ route('home') }}" class="brand-link">
             <img src="{{  Config::get('settings.logo') }}" alt="{{  Config::get('settings.name') }}" class="brand-image img-circle elevation-3"
                  style="opacity: .8">
-            <span class="brand-text font-weight-light">{{  Config::get('settings.name') }} <span class="right badge badge-danger">beta</span></span>
+            <span class="brand-text font-weight-light">{{  Config::get('settings.name') }} <span class="right badge badge-danger">LOGONYA</span></span>
         </a>
 
         <!-- Sidebar -->
