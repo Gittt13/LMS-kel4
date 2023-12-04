@@ -6,6 +6,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
 
   <title>{{ Config::get('settings.name') }} Dashboard Admin {{ Config::get('settings.description') }}</title>
   <!-- CSRF Token -->
@@ -186,21 +189,17 @@
                 </p>
               </a>
             </li>
+            
+            <li class="nav-item">
+              <a href="{{ route('admin.profile') }}" class="nav-link {{ is_active('admin.profile') }}">
+                  <i class="nav-icon fas fa-user"></i>
+                <p>
+                  {{ __('Profile') }}
+                </p>
+              </a>
+            </li>
 
-            <!-- DROPDOWN-->
-            <nav class="mt-2">
-              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-
-                <li class="nav-item has-treeview">
-                  <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-database"></i>
-                    <p>
-                      Data
-                      <i class="right fas fa-angle-left"></i>
-                    </p>
-                  </a>
-                  <ul class="nav nav-treeview">
-                    <li class="nav-item">
+            {{-- <li class="nav-item">
                       <a href="{{ route('admin.data-mahasiswa') }}" class="nav-link {{ is_active('admin.data-mahasiswa') }}">
                         <i class="nav-icon fas fa-user-graduate"></i>
                         <p>Data Mahasiswa</p>
@@ -223,14 +222,81 @@
                         <i class="nav-icon fas fa-book"></i>
                         <p>Data Mata Kuliah</p>
                       </a>
+                    </li> --}}
+
+            <!-- DROPDOWN KELAS-->
+            <nav class="mt-2">
+              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-database"></i>
+                    <p>
+                      Data Kelas
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="{{ route('admin.data-mahasiswa') }}" class="nav-link {{ is_active('admin.data-mahasiswa') }}">
+                        <i class="nav-icon fas fa-user-graduate"></i>
+                        <p>Kelas Umum</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ route('admin.data-dosen') }}" class="nav-link {{ is_active('admin.data-dosen') }}">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Kelas Programming</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ route('admin.data-jurusan') }}" class="nav-link {{ is_active('admin.data-jurusan') }}">
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>Kelas Tambahan</p>
+                      </a>
                     </li>
                   </ul>
                 </li>
-
                 <!-- Your other menu items -->
 
               </ul>
             </nav>
+            <!-- DROPDOWN KELAS -->
+
+            <!-- DROPDOWN INSTRUCTUR-->
+            <nav class="mt-2">
+              <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                <li class="nav-item has-treeview">
+                  <a href="#" class="nav-link">
+                    <i class="nav-icon fas fa-database"></i>
+                    <p>
+                      Data Instructur
+                      <i class="right fas fa-angle-left"></i>
+                    </p>
+                  </a>
+                  <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                      <a href="{{ route('admin.data-mahasiswa') }}" class="nav-link {{ is_active('admin.data-mahasiswa') }}">
+                        <i class="nav-icon fas fa-user-graduate"></i>
+                        <p>Profil Instructur</p>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="{{ route('admin.data-dosen') }}" class="nav-link {{ is_active('admin.data-dosen') }}">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Kelas Instructur</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <!-- Your other menu items -->
+
+              </ul>
+            </nav>
+            <!-- DROPDOWN Instructur -->
+            
+
             <!-- /.sidebar-menu -->
 
             {{-- <li class="nav-item">

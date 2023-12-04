@@ -15,7 +15,7 @@
                         <h5 style="font-size: small;">Forum</h5>
                     </div>
                 </a>
-                <a href="{{ route('tugas') }}" class="card text-center " style="background-color: #427D9D; border-radius: 15px; color: white; height: 75px;">
+                <a href="{{ route('tugas.teacher') }}" class="card text-center " style="background-color: #427D9D; border-radius: 15px; color: white; height: 75px;">
                     <div class="card-body d-flex flex-column align-items-center justify-content-center">
                         <ion-icon name="document-outline" style="font-size: 25px;"></ion-icon>
                         <h5 style="font-size: small;">Tugas</h5>
