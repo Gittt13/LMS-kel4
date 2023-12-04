@@ -125,12 +125,12 @@
 
 
   <!-- Kalender Kegiatan -->
-  <div class="col-md-4 mt-3">
+  <div class="col-md-14 mt-113">
     <div class="card">
       <div class="card-body">
         <h2 class="card-title">Kalender Kegiatan</h2>
         <div id="calendar justify-content-center">
-        <iframe src="https://calendar.google.com/calendar/embed?height=630&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FJakarta&title=Uni-Learn%20Schedule&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y18wZGFkMDJkYjdlZTY3MjhmNTljMWJhNGIxZDRlYTVjZGY0ZmVjYzc3ZDE0MDk0MDNiMTc5OWNjZTVmYmRjNDUyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333B679&color=%238E24AA" style="border:solid 1px #777" width="1320" height="800" frameborder="0" scrolling="no"></iframe>
+        <iframe src="https://calendar.google.com/calendar/embed?height=630&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FJakarta&title=Uni-Learn%20Schedule&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y18wZGFkMDJkYjdlZTY3MjhmNTljMWJhNGIxZDRlYTVjZGY0ZmVjYzc3ZDE0MDk0MDNiMTc5OWNjZTVmYmRjNDUyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333B679&color=%238E24AA" style="border:solid 1px #777" width="1200" height="800" frameborder="0" scrolling="no"></iframe>
         </div>
       </div>
     </div>
