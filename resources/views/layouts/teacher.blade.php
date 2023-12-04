@@ -93,7 +93,7 @@
         </button>
             <div class="dropdown-content">
                 <a href="#">Tambah Peserta</a>
-                <a href="#">Lihat Peserta</a>
+                <a href="#">Tambah Kelas</a>
             </div>
     </div>
     
@@ -128,7 +128,7 @@
                     <img src="{{ Auth::user()->avatar }}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                    <a href="{{ route('profile') }}" class="d-block">{{ Auth::user()->name }}</a>
                 </div>
             </div>
 
@@ -141,15 +141,6 @@
                             <i class="nav-icon fas fa-home"></i>
                             <p>
                                 {{ __('Dashboard') }}
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="{{ route('profile') }}" class="nav-link  {{ is_active('profile') }}">
-                            <i class="nav-icon fas fa-user"></i>
-                            <p>
-                                {{ __('Profile') }}
                             </p>
                         </a>
                     </li>
@@ -182,6 +173,23 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('kalender2') }}" class="nav-link {{ is_active('kalender2') }}">
+                            <i class="nav-icon far fa-calendar-alt"></i>
+                            <p>{{ __('kalender') }}</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('nilai.teacher') }}" class="nav-link {{ is_active('nilai') }}">
+                            <i class="nav-icon fas fa-coins"></i> <!-- Use the "coin" icon -->
+                            <p>
+                                {{ __('Nilai') }}
+                            </p>
+                        </a>
+                    </li>
+
 
                     <li class="nav-item">
                         <a href="{{ route('absensi') }}" class="nav-link  {{ is_active('absensi') }}">

@@ -23,27 +23,31 @@
             </div>
 
             <!-- Edit Form -->
-            <form id="editForm" method="post" action="{{ url('/teacher/update') }}" style="display: none;">
-                @csrf
-                <div class="form-group">
-                    <label for="subject">Mata Pelajaran:</label>
-                    <input type="text" class="form-control" id="subject" name="subject" value="Matematika">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" name="email" value="johndoe@example.com">
-                </div>
-                <div class="form-group">
-                    <label for="phone">No. HP:</label>
-                    <input type="text" class="form-control" id="phone" name="phone" value="081234567890">
-                </div>
-                <div class="form-group">
-                    <label for="address">Alamat:</label>
-                    <input type="text" class="form-control" id="address" name="address" value="Jl. Contoh No. 123">
-                </div>
-                <!-- Add more fields as needed -->
-                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
-            </form>
+                    <form id="editForm" method="post" action="{{ url('/teacher/update') }}" style="display: none;">
+                        @csrf
+                        <div class="form-group">
+                            <label for="name">Nama:</label>
+                            <input type="text" class="form-control" id="name" name="name" value="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Mata Pelajaran:</label>
+                            <input type="text" class="form-control" id="subject" name="subject" value="Matematika">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" value="johndoe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">No. HP:</label>
+                            <input type="text" class="form-control" id="phone" name="phone" value="081234567890">
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Alamat:</label>
+                            <input type="text" class="form-control" id="address" name="address" value="Jl. Contoh No. 123">
+                        </div>
+                        <!-- Add more fields as needed -->
+                        <button type="button" onclick="saveChanges()" class="btn btn-primary">Simpan Perubahan</button>
+                    </form>
 
             <!-- Toggle Edit Mode Button -->
             <div class="text-center mt-4">
@@ -68,5 +72,27 @@
             editForm.style.display = 'none';
         }
     }
+
+    function saveChanges() {
+    // Implement logic to save changes (update view mode with form values)
+    const nameValue = document.getElementById('name').value; // Tambah baris ini
+    const subjectValue = document.getElementById('subject').value;
+    const emailValue = document.getElementById('email').value;
+    const phoneValue = document.getElementById('phone').value;
+    const addressValue = document.getElementById('address').value;
+
+    // Update view mode with new values
+    document.getElementById('viewMode').querySelector('h2').textContent = nameValue; // Ganti subjectValue dengan nameValue
+    const listItems = document.getElementById('viewMode').querySelectorAll('ul.list-group-flush li');
+    listItems[0].textContent = 'Mata Pelajaran: ' + subjectValue;
+    listItems[1].textContent = 'Email: ' + emailValue;
+    listItems[2].textContent = 'No. HP: ' + phoneValue;
+    listItems[3].textContent = 'Alamat: ' + addressValue;
+
+    // Show view mode and hide edit form
+    document.getElementById('viewMode').style.display = 'block';
+    document.getElementById('editForm').style.display = 'none';
+}
+
 </script>
 @endsection
