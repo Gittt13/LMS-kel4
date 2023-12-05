@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   @yield('styles')
   @include('includes.analytics')
-  <style>
+  <!-- <style>
     .sidebar-dark-primary {
       background-color: #64CCC5;
     }
@@ -45,8 +45,7 @@
       text-overflow: ellipsis;
       max-width: 150px;
     }
-
-  </style>
+  </style> -->
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -65,25 +64,25 @@
           </a>
         </li>
 
-        <!-- SEARCH FORM -->
-        <form class="form-inline ml-3">
-          <div class="input-group input-group-sm">
-            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-            <div class="input-group-append">
-              <button class="btn btn-navbar" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </div>
-        </form>
       </ul>
+      <!-- SEARCH FORM -->
+      <form class="form-inline ml-3">
+        <div class="input-group input-group-sm">
+          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-navbar" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form>
 
       <!-- Navbar Right Links (Optional) -->
       <!-- Add your right navbar links here -->
     </nav>
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4" id="logo">
+    <aside class="main-sidebar sidebar-light-primary elevation-4" id="logo">
       <!-- Brand Logo -->
       <a class="brand-link">
         <img src="{{ Config::get('settings.logo') }}" alt="{{ Config::get('settings.name') }}" class="brand-image img-circle elevation-3" style="opacity: .8">

@@ -91,6 +91,7 @@
         </li>
     </ul>
 
+<<<<<<< HEAD
     <!-- bagian button add -->
             <!-- Dropdown Button -->
 <div class="dropdown">
@@ -176,30 +177,31 @@
 </div>
 
 
+=======
+>>>>>>> 67e332d7779e3183370d680959fc863365547607
     
     <!-- SEARCH FORM -->
     <form class="form-inline ml-auto">
-        <div class="input-group input-group-sm">
+        <div class="dropdown open">
+            <a class="btn btn-primary dropdown-toggle text-light" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                        <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+                </svg>
+                Peserta
+            </a>
+            <div class="dropdown-menu" aria-labelledby="triggerId">
+                <a class="dropdown-item" href="#">Tambah Peserta</a>
+                <a class="dropdown-item" href="#">Lihat Peserta</a>
+            </div>
+        </div>
+        <div class="input-group input-group-sm ml-3">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
                 <button class="btn btn-navbar" type="submit">
                     <i class="fas fa-search"></i>
                 </button>
-            </div>
-        </div>
-        <!-- lain-lain -->
-        <div class="dropdown open">
-            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                        Dropdown Sized
-                    </button>
-            <div class="dropdown-menu" aria-labelledby="triggerId">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item disabled" href="#">Disabled action</a>
-                <h6 class="dropdown-header">Section header</h6>
-                <a class="dropdown-item" href="#">Action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">After divider action</a>
             </div>
         </div>
     </form>
@@ -391,6 +393,15 @@
 
 <script src="{{ asset('js/app.js') }}"></script>
 <script src="{{ asset('vendor/sweetalert/sweetalert.all.js') }}"></script>
+<!-- Bootstrap JavaScript Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
+</script>
 @yield('scripts')
 </body>
 </html>
+
