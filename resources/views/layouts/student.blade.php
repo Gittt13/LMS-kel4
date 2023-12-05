@@ -19,6 +19,7 @@
 
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    
     @yield('styles')
     @include('includes.analytics')
 
@@ -125,7 +126,7 @@
                             <a href="{{ route('home-student') }}" class="nav-link {{ is_active('home') }}">
                                 <i class="fa-solid fa-house"></i>
                                 <p>
-                                    {{ __('Home') }}
+                                    {{ __('Dashboard') }}
                                 </p>
                             </a>
                         </li>
@@ -150,6 +151,14 @@
                                 <i class="fa-solid fa-marker"></i>
                                 <p>
                                     {{ __('Nilai') }}
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link {{ is_active('courses') }}">
+                                <i class="fas fa-book-open"></i>
+                                <p>
+                                    {{ __('My Courses') }}
                                 </p>
                             </a>
                         </li>

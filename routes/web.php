@@ -95,6 +95,10 @@ Route::get('/student/home/detail', function () {
 Route::get('/student/tambah-kelas', function () {
     return view('students.tambah-kelas');
 })->name('tambah-kelas');
+
+Route::get('/student/courses', function () {
+    return view('students.courses');
+})->name('student-courses');
 // Akhir Route Student
 
 
