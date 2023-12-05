@@ -60,7 +60,7 @@
     <div class="wrapper " id="app">
 
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light border-bottom">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light border-bottom fixed-top">
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
