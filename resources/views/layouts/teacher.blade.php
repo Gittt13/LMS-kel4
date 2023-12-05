@@ -19,6 +19,8 @@
 
 <!-- Bootstrap JS and Popper.js (jQuery is not required for Bootstrap 5) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
     @yield('styles')
@@ -73,6 +75,22 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #164863;}
+
+.modal {
+    z-index: 100;
+}
+.modal {
+    position: fixed; 
+    /* display: block;   */
+    opacity: 10;      
+}
+
+.modal-backdrop {
+    z-index: 200; 
+}
+
+
+
 </style>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper " id="app">
@@ -101,16 +119,39 @@
         </svg>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#tambahPesertaModal">Tambah Peserta</a>
+        <a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#myModal">Tambah Peserta</a>
         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#tambahKelasModal">Tambah Kelas</a>
     </div>
 </div>
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <!-- Modal for Tambah Peserta -->
-<div class="modal" id="tambahPesertaModal" tabindex="-1" role="dialog" aria-labelledby="tambahPesertaModalLabel" aria-hidden="true">
+<!-- <div class="modal" id="tambahPesertaModal" tabindex="-1" role="dialog" aria-labelledby="tambahPesertaModalLabel" aria-hidden="true"> -->
     <!-- Modal content for Tambah Peserta -->
 
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="tambahPesertaModalLabel">Tambah Peserta</h5>
@@ -118,10 +159,10 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body"> -->
                 <!-- Your form for adding participant data goes here -->
                 <!-- Example form: -->
-                <form>
+                <!-- <form>
                     <div class="form-group">
                         <label for="namaPeserta">Nama Peserta</label>
                         <input type="text" class="form-control" id="namaPeserta" placeholder="Nama Peserta">
@@ -131,25 +172,27 @@
                         <label for="kelasPeserta">Pilih Kelas</label>
                         <select class="form-control" id="kelasPeserta">
                             <option value="kelas1">Kelas 1</option>
-                            <option value="kelas2">Kelas 2</option>
+                            <option value="kelas2">Kelas 2</option> --> 
                             <!-- Add more options as needed -->
-                        </select>
+                        <!-- </select>
                     </div>
 
-                    <!-- Add more form fields as needed -->
+                   <--  Add more form fields as needed -->
 
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <!-- <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
 
 <!-- Modal for Tambah Kelas -->
-<div class="modal" id="tambahKelasModal" tabindex="-1" role="dialog" aria-labelledby="tambahKelasModalLabel" aria-hidden="true">
+<!-- <div class="modal" id="tambahKelasModal" tabindex="-1" role="dialog" aria-labelledby="tambahKelasModalLabel" aria-hidden="true"> -->
     <!-- Modal content for Tambah Kelas -->
 
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="tambahKelasModalLabel">Tambah Kelas</h5>
@@ -157,23 +200,23 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body"> -->
                 <!-- Your form for adding class data goes here -->
                 <!-- Example form: -->
-                <form>
+                <!-- <form>
                     <div class="form-group">
                         <label for="namaKelas">Nama Kelas</label>
                         <input type="text" class="form-control" id="namaKelas" placeholder="Nama Kelas">
-                    </div>
+                    </div> -->
 
                     <!-- Add more form fields as needed -->
-
+<!-- 
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
     
