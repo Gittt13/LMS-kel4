@@ -83,23 +83,22 @@
         </li>
     </ul>
 
+    <!-- bagian button add -->
+    <div class="dropdown d-flex flex-row-reverse justify-content-end">
+        <button class="dropbtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
+                <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+                <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
+            </svg>
+        </button>
+            <div class="dropdown-content">
+                <a href="#">Tambah Peserta</a>
+                <a href="#">Lihat Peserta</a>
+            </div>
+    </div>
     
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-auto" style="gap: 1rem;">
-        <!-- bagian button Add Peserta -->
-        <div class="dropdown dropleft">
-               <button class="dropbtn">
-                   <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
-                       <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-                       <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1z"/>
-                   </svg>
-               </button>
-               <div class="dropdown-content" style="left: 0;">
-                   <a href="#">Tambah Peserta</a>
-                   <a href="#">Lihat Peserta</a>
-               </div>
-        </div>
-        <!-- Formnya -->
+    <form class="form-inline ml-auto">
         <div class="input-group input-group-sm">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -144,7 +143,7 @@
                     <img src="{{ Auth::user()->avatar }}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+                    <a href="{{ route('profile') }}" class="d-block">{{ Auth::user()->name }}</a>
                 </div>
             </div>
 
@@ -157,15 +156,6 @@
                             <i class="nav-icon fas fa-home"></i>
                             <p>
                                 {{ __('Dashboard') }}
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="{{ route('profile') }}" class="nav-link  {{ is_active('profile') }}">
-                            <i class="nav-icon fas fa-user"></i>
-                            <p>
-                                {{ __('Profile') }}
                             </p>
                         </a>
                     </li>
@@ -198,6 +188,23 @@
                             </li>
                         </ul>
                     </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('kalender2') }}" class="nav-link {{ is_active('kalender2') }}">
+                            <i class="nav-icon far fa-calendar-alt"></i>
+                            <p>{{ __('kalender') }}</p>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{{ route('nilai.teacher') }}" class="nav-link {{ is_active('nilai') }}">
+                            <i class="nav-icon fas fa-coins"></i> <!-- Use the "coin" icon -->
+                            <p>
+                                {{ __('Nilai') }}
+                            </p>
+                        </a>
+                    </li>
+
 
                     <li class="nav-item">
                         <a href="{{ route('absensi') }}" class="nav-link  {{ is_active('absensi') }}">
