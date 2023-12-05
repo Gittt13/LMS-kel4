@@ -39,7 +39,7 @@
                     <div class="col-sm-6 text-black">
 
                         <div class="px-5 ms-xl-4">
-                            <i class="fas fa-crow fa-2x me-3 pt-3 mt-xl-4" style="color: #709085;"></i>
+                            <i class="fas fa-crow fa-2x me-3 pt-4 mt-xl-4" style="color: #709085;"></i>
                             <span class="h1 fw-bold mb-0">Logo</span>
                         </div>
 
@@ -49,12 +49,12 @@
                                 <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">{{ __('Login') }}</h3>
 
                                 <div class="form-outline mb-4">
+                                    <label class="form-label" for="form2Example18">{{ __('E-Mail or Username')
+                                        }}</label>
                                     <input type="email" id="form2Example18"
                                         class="form-control form-control-lg @error('email') is-invalid @enderror"
                                         name="email" value="{{ old('email') }}" required autocomplete="email"
                                         autofocus />
-                                    <label class="form-label" for="form2Example18">{{ __('E-Mail or Username')
-                                        }}</label>
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -63,10 +63,10 @@
                                 </div>
 
                                 <div class="form-outline mb-4">
+                                    <label class="form-label" for="form2Example28">{{ __('Password') }}</label>
                                     <input type="password" id="form2Example28"
                                         class="form-control form-control-lg @error('password') is-invalid @enderror"
                                         name="password" required autocomplete="current-password" />
-                                    <label class="form-label" for="form2Example28">{{ __('Password') }}</label>
                                     @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
