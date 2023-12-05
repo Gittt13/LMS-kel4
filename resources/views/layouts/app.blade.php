@@ -53,12 +53,9 @@
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <!-- <li><a class="nav-link scrollto" href="#contact">Contact</a></li> -->
           <!-- <li><a class="getstarted scrollto" href="{{route('login')}}">Get Started</a></li> -->
-          
+
     <!-- Authentication Links -->
     @guest
-    <span class="navbar-text mr-3" style="color:#F3EEEA; font-family: 'Poppins', sans-serif; ">
-    Silahkan login atau daftar akun
-    </span>
     <li class="nav-item">
         <a class="nav-link" href="{{ route('login') }}" style="color:#F3EEEA; font-family: 'Poppins', sans-serif;">{{ __('Login') }}</a>
     </li>
