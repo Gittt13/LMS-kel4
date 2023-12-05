@@ -91,7 +91,6 @@
         </li>
     </ul>
 
-<<<<<<< HEAD
     <!-- bagian button add -->
             <!-- Dropdown Button -->
 <div class="dropdown">
@@ -177,8 +176,6 @@
 </div>
 
 
-=======
->>>>>>> 67e332d7779e3183370d680959fc863365547607
     
     <!-- SEARCH FORM -->
     <form class="form-inline ml-auto">
