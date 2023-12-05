@@ -6,7 +6,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Login</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -34,16 +34,16 @@
             }
         </style>
         <section class="vh-100">
-            <div class="container-fluid">
+            <div class="container-fluid bg-light">
                 <div class="row">
                     <div class="col-sm-6 text-black">
 
                         <div class="px-5 ms-xl-4">
-                            <i class="fas fa-crow fa-2x me-3 pt-3 mt-xl-3" style="color: #709085;"></i>
+                            <i class="fas fa-crow fa-2x me-3 pt-3 mt-xl-4" style="color: #709085;"></i>
                             <span class="h1 fw-bold mb-0">Logo</span>
                         </div>
 
-                        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                        <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-4 pt-5 pt-xl-0 mt-xl-n5">
                             <form method="POST" action="{{ route('login') }}" id="form-auth" style="width: 25rem;">
                                 @csrf
                                 <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">{{ __('Login') }}</h3>
