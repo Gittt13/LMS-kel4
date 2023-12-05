@@ -9,14 +9,14 @@
 </div>
 </div>
 
-<div class="row">
+<div class="row m-1">
   <div class="col-md-3">
-    <div class="card text-center" style="background-color: #3498db; border-radius: 15px; color: white;">
+    <div class="card text-center" style="background-color: blueviolet; border-radius: 15px; color: white;">
       <div class="card-body">
-        <i class="fas fa-users" style="font-size: 90px;"></i>
+        <i class="fas fa-users mb-2" style="font-size: 90px;"></i>
         <h3>Data Peserta</h3>
-        <h3>Total: 2</h3>
-        <a href="{{ route('data_peserta') }}" class="btn btn-light mt-3">More Info</a>
+        <h5>Total: 2</h5>
+        <a href="{{ route('data_peserta') }}" class="btn btn-light mt-3">Selengkapnya</a>
       </div>
     </div>
   </div>
@@ -25,9 +25,9 @@
   <div class="col-md-3">
     <div class="card text-center" style="background-color: #2ecc71; border-radius: 15px; color: white;">
       <div class="card-body">
-        <i class="fas fa-graduation-cap" style="font-size: 90px;"></i>
+        <i class="fas fa-graduation-cap mb-2" style="font-size: 90px;"></i>
         <h3>Data Instruktur</h3>
-        <h3>Total: 2</h3>
+        <h5>Total: 2</h5>
         <a href="#" class="btn btn-light mt-3">More Info</a>
       </div>
     </div>
@@ -36,9 +36,9 @@
   <div class="col-md-3">
     <div class="card text-center" style="background-color: #e74c3c; border-radius: 15px; color: white;">
       <div class="card-body">
-        <i class="fas fa-book" style="font-size: 90px;"></i>
+        <i class="fas fa-book mb-2" style="font-size: 90px;"></i>
         <h3>Jurusan</h3>
-        <h3>Total: 8</h3>
+        <h5>Total: 8</h5>
         <a href="#" class="btn btn-light mt-3">More Info</a>
       </div>
     </div>
@@ -47,9 +47,9 @@
   <div class="col-md-3">
     <div class="card text-center" style="background-color: #f39c12; border-radius: 15px; color: white;">
       <div class="card-body">
-        <i class="fas fa-user-graduate" style="font-size: 90px;"></i>
+        <i class="fas fa-user-graduate mb-2" style="font-size: 90px;"></i>
         <h3>Mata Kuliah</h3>
-        <h3>Total: 24</h3>
+        <h5>Total: 24</h5>
         <a href="#" class="btn btn-light mt-3">More Info</a>
       </div>
     </div>
@@ -58,7 +58,7 @@
   {{-- <div class="col-md-3 mt-3">
       <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
         <div class="card-body">
-          <i class="fas fa-users" style="font-size: 50px; float: left; margin-right: 10px;"></i>
+          <i class="fas fa-users mb-2" style="font-size: 50px; float: left; margin-right: 10px;"></i>
           <h5>Total User Aktif</h5>
           <h5>Total: 150</h5>
         </div>
@@ -98,7 +98,7 @@
 <!-- OPEN Grafik -->
 <div class="grafik">
   <div class="row">
-    <div class="col-md-6 mt-5">
+    <div class="col-md-6 mt-3">
       <div class="card">
         <div class="card-body">
           <h2 class="card-title">Grafik Data Jurusan Mata Pelajaran</h2>
@@ -108,7 +108,7 @@
     </div>
 
     <!-- Diagram Perbandingan Mahasiswa di Tiap Jurusan -->
-    <div class="col-md-6 mt-5">
+    <div class="col-md-6 mt-3">
       <div class="card">
         <div class="card-body">
           <h2 class="card-title">Perbandingan Mahasiswa di Tiap Jurusan</h2>
