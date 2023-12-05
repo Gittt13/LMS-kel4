@@ -82,7 +82,7 @@
     </nav>
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-light-dark elevation-4" id="logo">
+    <aside class="main-sidebar sidebar-light-primary elevation-4" id="logo">
       <!-- Brand Logo -->
       <a class="brand-link">
         <img src="{{ Config::get('settings.logo') }}" alt="{{ Config::get('settings.name') }}" class="brand-image img-circle elevation-3" style="opacity: .8">
