@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -7,6 +8,7 @@ use App\Event;
 use MaddHatter\LaravelFullcalendar\Facades\Calendar;
 use DB;
 use Illuminate\Support\Facades\Redirect;
+
 
 class EventController extends Controller {
     /**
@@ -34,7 +36,7 @@ class EventController extends Controller {
             }
         }
         $calendar = \Calendar::addEvents($events);
-        return view('admin.calendar', compact('events', 'calendar'));
+        return view('admin/eventpage', compact('events', 'calendar'));
     }
 
     /**
@@ -44,7 +46,7 @@ class EventController extends Controller {
      */
 
     public function display() {
-        return view("layouts.addevent");
+        return view('admin.addevent');
     }
     public function create() {
         //
@@ -63,21 +65,21 @@ class EventController extends Controller {
         $events->start_date = $request->input('start_date');
         $events->end_date = $request->input('end_date');
         $events->save();
-        return redirect('admin.calendar')->with('success', 'Event Added');
+        return redirect('/editeventurl')->with('success', 'Event Added');
     }
 
 
     public function show() {
 
         $events = Event::all();
-        return view('layouts.display')->with('events', $events);
+        return view('admin.display')->with('events', $events);
     }
 
 
     public function edit($id) {
 
         $events = Event::find($id);
-        return view('layouts.editform', compact('events', 'id'));
+        return view('admin.editform', compact('events', 'id'));
     }
 
     public function update(Request $request, $id) {

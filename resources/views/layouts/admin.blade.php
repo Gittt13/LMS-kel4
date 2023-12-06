@@ -128,9 +128,9 @@
               </a>
             </li>
 
-            <!-- Navbar Item - Calendar -->
+            <!-- Navbar Item - About -->
             <li class="nav-item">
-              <a href="{{ route('admin.calendar') }}" class="nav-link {{ is_active('admin.calendar') }}">
+              <a href="{{ route('admin.eventpage') }}" class="nav-link {{ is_active('admin.eventpage') }}">
                 <i class="nav-icon fas fa-info"></i>
                 <p>
                   {{ __('Calendar') }}

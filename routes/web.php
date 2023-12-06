@@ -205,16 +205,15 @@ Route::get('/teacher/nilai', function () {
 // Route teacher
 
 
-// Route Calendar
-Route::resource('/admin/calendar', 'EventController');
+Route::resource('/eventpage', 'EventController', ['as'=> 'eventpage']);
+Route::get('/eventpage', 'EventController@index')->name('eventpage');
+//Route::get('addeventurl','EventController@create')->name('EventController.store');
+Route::get('addeventurl','EventController@display')->name('EventController.store');
+Route::post('addeventurl/store','EventController@store')->name('addevent.store');
 
-// Route::get('addeventurl','EventController@create')->name('EventController.store');
-Route::get('addeventurl', 'EventController@display')->name('EventController.store');
-Route::post('addeventurl/store', 'EventController@store')->name('addevent.store');
+Route::get('editeventurl','EventController@show');
+Route::get('deleteeventurl','EventController@show');
 
-Route::get('editeventurl', 'EventController@show');
-Route::get('deleteeventurl', 'EventController@show');
+Route::post('editeventurl/update/{id}','EventController@update')->name('editform_update');
 
-Route::post('editeventurl/update/{id}', 'EventController@update')->name('editform_update');
-
-Route::get('deleteeventurl/{id}', 'EventController@destroy');
+Route::get('deleteeventurl/{id}','EventController@destroy');
