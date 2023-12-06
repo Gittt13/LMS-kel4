@@ -207,7 +207,7 @@ Route::get('/teacher/nilai', function () {
 
 
 Route::resource('/eventpage', 'EventController', ['as'=> 'eventpage']);
-Route::get('/eventpage', 'EventController@index')->name('eventpage');
+Route::get('/eventpage', 'EventController@index')->name('admin.eventpage');
 //Route::get('addeventurl','EventController@create')->name('EventController.store');
 Route::get('addeventurl','EventController@display')->name('EventController.store');
 Route::post('addeventurl/store','EventController@store')->name('addevent.store');
