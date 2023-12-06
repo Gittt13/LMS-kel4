@@ -19,6 +19,8 @@
 
 <!-- Bootstrap JS and Popper.js (jQuery is not required for Bootstrap 5) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 
     @yield('styles')
@@ -73,6 +75,22 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #164863;}
+
+.modal {
+    z-index: 100;
+}
+.modal {
+    position: fixed; 
+    /* display: block;   */
+    opacity: 10;      
+}
+
+.modal-backdrop {
+    z-index: 200; 
+}
+
+
+
 </style>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper " id="app">
@@ -92,7 +110,7 @@
     </ul>
 
     <!-- bagian button add -->
-            <!-- Dropdown Button -->
+<!-- Dropdown Button -->
 <div class="dropdown">
     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
@@ -101,16 +119,70 @@
         </svg>
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#tambahPesertaModal">Tambah Peserta</a>
+        <a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#tambahPesertaModal">Tambah Peserta</a>
         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#tambahKelasModal">Tambah Kelas</a>
     </div>
 </div>
 
 <!-- Modal for Tambah Peserta -->
-<div class="modal" id="tambahPesertaModal" tabindex="-1" role="dialog" aria-labelledby="tambahPesertaModalLabel" aria-hidden="true">
+<div class="modal fade" id="tambahPesertaModal" tabindex="-1" role="dialog" aria-labelledby="tambahPesertaModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Tambah Peserta</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form tambah peserta -->
+                <form>
+                    <div class="mb-3">
+                        <label for="namaPeserta" class="form-label">Nama Peserta</label>
+                        <input type="text" class="form-control" id="namaPeserta" placeholder="Nama Peserta">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="kelasPeserta" class="form-label">Pilih Kelas</label>
+                        <select class="form-control" id="kelasPeserta">
+                            <option value="kelas1">Kelas 1</option>
+                            <option value="kelas2">Kelas 2</option>
+                            <option value="kelas2">Kelas 3</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Tambah Kelas -->
+<div class="modal fade" id="tambahKelasModal" tabindex="-1" role="dialog" aria-labelledby="tambahKelasModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Tambah Kelas</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form tambah kelas -->
+                <form>
+                    <div class="mb-3">
+                        <label for="namaKelas" class="form-label">Nama Kelas</label>
+                        <input type="text" class="form-control" id="namaKelas" placeholder="Nama Kelas">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal for Tambah Peserta -->
+<!-- <div class="modal" id="tambahPesertaModal" tabindex="-1" role="dialog" aria-labelledby="tambahPesertaModalLabel" aria-hidden="true"> -->
     <!-- Modal content for Tambah Peserta -->
 
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="tambahPesertaModalLabel">Tambah Peserta</h5>
@@ -118,10 +190,10 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body"> -->
                 <!-- Your form for adding participant data goes here -->
                 <!-- Example form: -->
-                <form>
+                <!-- <form>
                     <div class="form-group">
                         <label for="namaPeserta">Nama Peserta</label>
                         <input type="text" class="form-control" id="namaPeserta" placeholder="Nama Peserta">
@@ -131,25 +203,27 @@
                         <label for="kelasPeserta">Pilih Kelas</label>
                         <select class="form-control" id="kelasPeserta">
                             <option value="kelas1">Kelas 1</option>
-                            <option value="kelas2">Kelas 2</option>
+                            <option value="kelas2">Kelas 2</option> --> 
                             <!-- Add more options as needed -->
-                        </select>
+                        <!-- </select>
                     </div>
 
-                    <!-- Add more form fields as needed -->
+                   <--  Add more form fields as needed -->
 
-                    <button type="submit" class="btn btn-primary">Simpan</button>
+                    <!-- <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+
 
 <!-- Modal for Tambah Kelas -->
-<div class="modal" id="tambahKelasModal" tabindex="-1" role="dialog" aria-labelledby="tambahKelasModalLabel" aria-hidden="true">
+<!-- <div class="modal" id="tambahKelasModal" tabindex="-1" role="dialog" aria-labelledby="tambahKelasModalLabel" aria-hidden="true"> -->
     <!-- Modal content for Tambah Kelas -->
 
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <!-- <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="tambahKelasModalLabel">Tambah Kelas</h5>
@@ -157,23 +231,23 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body"> -->
                 <!-- Your form for adding class data goes here -->
                 <!-- Example form: -->
-                <form>
+                <!-- <form>
                     <div class="form-group">
                         <label for="namaKelas">Nama Kelas</label>
                         <input type="text" class="form-control" id="namaKelas" placeholder="Nama Kelas">
-                    </div>
+                    </div> -->
 
                     <!-- Add more form fields as needed -->
-
+<!-- 
                     <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
     
@@ -222,7 +296,7 @@
                     <img src="{{ Auth::user()->avatar }}" class="img-circle elevation-2" alt="User Image">
                 </div>
                 <div class="info">
-                    <a href="{{ route('profile') }}" class="d-block">{{ Auth::user()->name }}</a>
+                    <a href="{{ route('profile') }}" class="d-block" style="text-decoration:none;">{{ Auth::user()->name }}</a>
                 </div>
             </div>
 
@@ -241,7 +315,7 @@
 
                     <li class="nav-item has-treeview">
                         <a href="kelas" class="nav-link">
-                            <i class="nav-icon fas fa-chalkboard"></i>
+                            <i class="nav-icon fas fa-school"></i>
                             <p>
                                 {{ __('Kelas') }}
                             </p>
@@ -249,19 +323,19 @@
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="{{ route('kelas') }}" class="nav-link">
-                                    <i class="fas fa-link"></i>
+                                    <i class="av-icon fas fa-book"></i>
                                     <p>Kelas 1</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    <i class="fas fa-link"></i>
+                                    <i class="av-icon fas fa-book"></i>
                                     <p>Kelas 2</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link">
-                                    <i class="fas fa-link"></i>
+                                    <i class="av-icon fas fa-book"></i>
                                     <p>Kelas 3</p>
                                 </a>
                             </li>
@@ -277,7 +351,7 @@
 
                     <li class="nav-item">
                         <a href="{{ route('nilai.teacher') }}" class="nav-link {{ is_active('nilai') }}">
-                            <i class="nav-icon fas fa-coins"></i> <!-- Use the "coin" icon -->
+                            <i class="nav-icon fas fa-poll"></i> <!-- Use the "coin" icon -->
                             <p>
                                 {{ __('Nilai') }}
                             </p>
