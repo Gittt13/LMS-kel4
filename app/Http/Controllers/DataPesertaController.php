@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\DataPeserta;
 use Illuminate\Http\Request;
 
 class DataPesertaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        return view('admin/data-peserta/data_peserta');
+        $data_pesertas = DataPeserta::all();  //select * from data_pesertas
+        return view('admin/data-peserta/data_peserta', compact('data_pesertas'));
     }
 }
