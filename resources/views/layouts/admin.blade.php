@@ -8,8 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css" />
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css" /> -->
   <title>{{ Config::get('settings.name') }} Dashboard Admin {{ Config::get('settings.description') }}</title>
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -81,15 +81,15 @@
       <!-- Navbar Right Links (Optional) -->
       <!-- Add your right navbar links here -->
     </nav>
-
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-light-primary elevation-4" id="logo">
+    <aside class="main-sidebar sidebar-light-warning elevation-4" id="logo">
       <!-- Brand Logo -->
       <a class="brand-link">
-        <img src="{{ Config::get('settings.logo') }}" alt="{{ Config::get('settings.name') }}" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">{{ Config::get('settings.name') }} <span class="right badge badge-danger">ADMIN</span>
+        <img src="{{ Config::get('settings.logo') }}" alt="{{ Config::get('settings.name') }}"
+          class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">{{ Config::get('settings.name') }} <span
+            class="right badge badge-danger">ADMIN</span>
       </a>
-
       <!-- Sidebar -->
       <div class="sidebar">
 
@@ -97,7 +97,7 @@
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
           <div class="image">
             <img src="{{ Auth::user()->avatar }}" class="img-circle elevation-2" alt="User Image">
-            
+
           </div>
           <div class="info">
             <a href="#" class="d-block" style="text-decoration: none;">{{ Auth::user()->name }}</a>
@@ -159,19 +159,22 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('admin/kelas-umum/halaman') }}" class="nav-link {{ is_active('admin/kelas-umum/halaman') }}">
+                  <a href="{{ route('admin/kelas-umum/halaman') }}"
+                    class="nav-link {{ is_active('admin/kelas-umum/halaman') }}">
                     <i class="nav-icon fas fa-user-graduate"></i>
                     <p>Kelas Umum</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('admin/kelas-programming/halaman') }}" class="nav-link {{ is_active('admin/kelas-programming/halaman') }}">
+                  <a href="{{ route('admin/kelas-programming/halaman') }}"
+                    class="nav-link {{ is_active('admin/kelas-programming/halaman') }}">
                     <i class="nav-icon fas fa-users"></i>
                     <p>Kelas Programming</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('admin/kelas-tambahan/halaman') }}" class="nav-link {{ is_active('admin/kelas-tambahan/halaman') }}">
+                  <a href="{{ route('admin/kelas-tambahan/halaman') }}"
+                    class="nav-link {{ is_active('admin/kelas-tambahan/halaman') }}">
                     <i class="nav-icon fas fa-list"></i>
                     <p>Kelas Tambahan</p>
                   </a>
@@ -190,13 +193,15 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('admin/instructur-profil/halaman') }}" class="nav-link {{ is_active('admin/instructur-profil/halaman') }}">
+                  <a href="{{ route('admin/instructur-profil/halaman') }}"
+                    class="nav-link {{ is_active('admin/instructur-profil/halaman') }}">
                     <i class="nav-icon fas fa-user-graduate"></i>
                     <p>Profil Instructur</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('admin/instructur-kelas/halaman') }}" class="nav-link {{ is_active('admin/instructur-kelas/halaman') }}">
+                  <a href="{{ route('admin/instructur-kelas/halaman') }}"
+                    class="nav-link {{ is_active('admin/instructur-kelas/halaman') }}">
                     <i class="nav-icon fas fa-list"></i>
                     <p>Kelas Instructur</p>
                   </a>
@@ -215,13 +220,15 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('admin/peserta-profil/halaman') }}" class="nav-link {{ is_active('admin/peserta-profil/halaman') }}">
+                  <a href="{{ route('admin/peserta-profil/halaman') }}"
+                    class="nav-link {{ is_active('admin/peserta-profil/halaman') }}">
                     <i class="nav-icon fas fa-user-graduate"></i>
                     <p>Profil Peserta</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('admin/peserta-kelas/halaman') }}" class="nav-link {{ is_active('admin/instructur-profil/halaman') }}">
+                  <a href="{{ route('admin/peserta-kelas/halaman') }}"
+                    class="nav-link {{ is_active('admin/instructur-profil/halaman') }}">
                     <i class="nav-icon fas fa-users"></i>
                     <p>Kelas Peserta</p>
                   </a>
@@ -231,7 +238,8 @@
 
             <!-- Navbar Item - Logout -->
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 <i class="nav-icon fas fa-power-off red"></i>
                 <p>
                   {{ __('Logout') }}
@@ -276,7 +284,8 @@
       <div class="float-right d-none d-sm-inline">
         {{ Config::get('settings.name') }}
       </div>
-      <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="http://angelkurten.com">KELOMPOK 4</a>.</strong> Jika orang lain bisa kenapa harus saya.
+      <strong>Copyright &copy; {{ \Carbon\Carbon::now()->year }} <a href="http://angelkurten.com">KELOMPOK
+          4</a>.</strong> Jika orang lain bisa kenapa harus saya.
     </footer>
   </div>
 

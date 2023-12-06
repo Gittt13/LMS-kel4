@@ -38,6 +38,14 @@
               {!! $calendar->calendar() !!}
             </div>
           </div>
+          <a
+              name=""
+              id=""
+              class="btn btn-danger"
+              href="{{ route('admin.dashboard') }}"
+              role="button"
+              >Kembali</a
+          >
         </div>
       </div>
     </div>
