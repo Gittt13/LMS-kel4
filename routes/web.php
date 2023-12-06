@@ -84,9 +84,10 @@ Route::get('/student/tugas', function () {
     return view('students.tugas');
 })->name('tugas');
 
-Route::get('/student/nilai', function () {
-    return view('students.nilai');
-})->name('nilai');
+// Route::get('/student/nilai', function () {
+//     return view('students.nilai');
+// })->name('nilai');
+Route::get('student/nilai', 'NilaiController@index')->name('nilai');
 
 Route::get('/student/home/detail', function () {
     return view('students.home_detail');

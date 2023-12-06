@@ -12,24 +12,16 @@
                 <th scope="col">Nilai</th>
             </tr>
         </thead>
+        @foreach ($nilai as $item)
         <tbody>
             <tr>
-                <th scope="row">1</th>
-                <td>Matematika</td>
-                <td>85</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Bahasa Inggris</td>
-                <td>92</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>IPA</td>
-                <td>78</td>
+                <th scope="row">{{ $loop->iteration }}</th>
+                <td>{{ $item->kelas }}</td>
+                <td>{{ $item->nilai }}</td>
             </tr>
             <!-- Tambahkan baris ini untuk setiap data nilai yang Anda miliki -->
         </tbody>
+        @endforeach
     </table>
 </div>
 @endsection
