@@ -154,15 +154,42 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview">
+                        {{-- <li class="nav-item has-treeview">
                             <a href="" class="nav-link {{ is_active('courses') }}">
                                 <i class="fas fa-book-open"></i>
                                 <p>
                                     {{ __('My Courses') }}
                                 </p>
                             </a>
-                        </li>
-
+                        </li> --}}
+                                            <li class="nav-item has-treeview">
+                        <a href="kelas" class="nav-link">
+                            <i class="fas fa-book-open"></i>
+                            <p>
+                                {{ __('Kelas') }}
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="{{ route('kelas') }}" class="nav-link">
+                                    <i class="av-icon fas fa-book"></i>
+                                    <p>Kelas 1</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="av-icon fas fa-book"></i>
+                                    <p>Kelas 2</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="av-icon fas fa-book"></i>
+                                    <p>Kelas 3</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                         {{-- <li class="nav-item">
                             <a href="{{ route('stream') }}" class="nav-link  {{ is_active('stream') }}">
                                 <i class="nav-icon fas fa-play"></i>
