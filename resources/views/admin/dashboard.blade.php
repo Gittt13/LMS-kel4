@@ -56,116 +56,114 @@
   </div>
 
   {{-- <div class="col-md-3 mt-3">
-      <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
-        <div class="card-body">
-          <i class="fas fa-users mb-2" style="font-size: 50px; float: left; margin-right: 10px;"></i>
-          <h5>Total User Aktif</h5>
-          <h5>Total: 150</h5>
-        </div>
+    <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
+      <div class="card-body">
+        <i class="fas fa-users mb-2" style="font-size: 50px; float: left; margin-right: 10px;"></i>
+        <h5>Total User Aktif</h5>
+        <h5>Total: 150</h5>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-3 mt-3">
-      <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
-        <div class="card-body">
-          <i class="fas fa-user-shield" style="font-size: 50px; float: left; margin-right: 8px;"></i>
-          <h5>Total Admin User</h5>
-          <h5>Total: 50</h5>
-        </div>
+  <div class="col-md-3 mt-3">
+    <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
+      <div class="card-body">
+        <i class="fas fa-user-shield" style="font-size: 50px; float: left; margin-right: 8px;"></i>
+        <h5>Total Admin User</h5>
+        <h5>Total: 50</h5>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-3 mt-3">
-      <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
-        <div class="card-body">
-          <i class="fas fa-user-graduate" style="font-size: 50px; float: left; margin-right: 8px;"></i>
-          <h5>Total Mahasiswa User</h5>
-          <h5>Total: 100</h5>
-        </div>
+  <div class="col-md-3 mt-3">
+    <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
+      <div class="card-body">
+        <i class="fas fa-user-graduate" style="font-size: 50px; float: left; margin-right: 8px;"></i>
+        <h5>Total Mahasiswa User</h5>
+        <h5>Total: 100</h5>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-3 mt-3">
-      <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
-        <div class="card-body">
-          <i class="fas fa-user-graduate" style="font-size: 50px; float: left; margin-right: 8px;"></i>
-          <h5>Total Pengunjung</h5>
-          <h5>Total: 5</h5>
-        </div>
-      </div> --}}
-</div>
+  <div class="col-md-3 mt-3">
+    <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
+      <div class="card-body">
+        <i class="fas fa-user-graduate" style="font-size: 50px; float: left; margin-right: 8px;"></i>
+        <h5>Total Pengunjung</h5>
+        <h5>Total: 5</h5>
+      </div>
+    </div> --}}
+  </div>
 
-<!-- OPEN Grafik -->
-<div class="grafik">
-  <div class="row">
-    <div class="col-md-6 mt-3">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title">Perbandingan Mahasiswa di Tiap Jurusan</h2>
-          <canvas id="diagram1" width="400" height="400"></canvas>
+  <!-- OPEN Grafik -->
+  <div class="grafik">
+    <div class="row">
+      <div class="col-md-6 mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Perbandingan Mahasiswa di Tiap Jurusan</h2>
+            <canvas id="diagram1" width="400" height="400"></canvas>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Diagram Perbandingan Mahasiswa di Tiap Jurusan -->
-    <div class="col-md-6 mt-3">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title"> Grafik Data Kelas</h2>
-          <canvas id="diagram2" width="400" height="200"></canvas>
+      <!-- Diagram Perbandingan Mahasiswa di Tiap Jurusan -->
+      <div class="col-md-6 mt-3">
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title"> Grafik Data Kelas</h2>
+            <canvas id="diagram2" width="400" height="200"></canvas>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<!-- END GRAFIK -->
+  <!-- END GRAFIK -->
 
 
 
 
 
   <!-- Kalender Kegiatan -->
+
   <div class="col-md-14 mt-113">
     <div class="card">
-      <div class="card-body">
+      <div class="card-body" style="height: 100vh !important;">
         <h2 class="card-title">Kalender Kegiatan</h2>
-        <div id="calendar justify-content-center">
         <iframe src="https://calendar.google.com/calendar/embed?height=630&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FJakarta&title=Uni-Learn%20Schedule&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y18wZGFkMDJkYjdlZTY3MjhmNTljMWJhNGIxZDRlYTVjZGY0ZmVjYzc3ZDE0MDk0MDNiMTc5OWNjZTVmYmRjNDUyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333B679&color=%238E24AA" style="border:solid 1px #777" width="1200" height="800" frameborder="0" scrolling="no"></iframe>
-        </div>
       </div>
     </div>
   </div>
 
-{{-- Data Mahasiswa --}}
-<div class="col-md-12 mt-5">
-  <div class="card">
-    <div class="card-body">
-      <h2 class="card-title">Data Mahasiswa
-      </h2>
-      <canvas id="myChart" width="400" height="200"></canvas>
+  {{-- Data Mahasiswa --}}
+  <div class="col-md-12 mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Data Mahasiswa
+        </h2>
+        <canvas id="myChart" width="400" height="200"></canvas>
+      </div>
     </div>
   </div>
-</div>
 
-{{-- Data Jurusan --}}
-<div class="col-md-12 mt-5">
-  <div class="card">
-    <div class="card-body">
-      <h2 class="card-title">Data Jurusan</h2>
-      <canvas id="myChart" width="400" height="200"></canvas>
+  {{-- Data Jurusan --}}
+  <div class="col-md-12 mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Data Jurusan</h2>
+        <canvas id="myChart" width="400" height="200"></canvas>
+      </div>
     </div>
   </div>
-</div>
 
-{{-- Data Dosen Pengajar --}}
-<div class="col-md-12 mt-5">
-  <div class="card">
-    <div class="card-body">
-      <h2 class="card-title">Data Dosen Pelajaran</h2>
-      <canvas id="myChart" width="400" height="200"></canvas>
+  {{-- Data Dosen Pengajar --}}
+  <div class="col-md-12 mt-5">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title">Data Dosen Pelajaran</h2>
+        <canvas id="myChart" width="400" height="200"></canvas>
+      </div>
     </div>
   </div>
-</div>
 
 </div>
 </div>
@@ -182,7 +180,7 @@
 
 <!-- perbandiangan mahasiswa -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     var ctx = document.getElementById('diagram2').getContext('2d');
     var perbandinganChart = new Chart(ctx, {
       type: 'doughnut'
@@ -194,12 +192,12 @@
             'rgba(255, 99, 132, 0.7)'
             , 'rgba(54, 162, 235, 0.7)'
             , 'rgba(255, 206, 86, 0.7)'
-          , ]
+            ,]
           , borderColor: [
             'rgba(255, 99, 132, 0.7)'
             , 'rgba(54, 162, 235, 0.7)'
             , 'rgba(255, 206, 86, 0.7)'
-          , ]
+            ,]
           , borderWidth: 1
         }]
       }
@@ -207,7 +205,8 @@
         cutoutPercentage: 50
         , responsive: true
       }
-    , });
+      ,
+    });
   });
 
 </script>
@@ -215,7 +214,7 @@
 
 <!-- Dummy Data (Data Jurusan Mata Pelajaran) -->
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     var ctx = document.getElementById('diagram1').getContext('2d');
     var myChart1 = new Chart(ctx, {
       type: 'bar'
@@ -230,14 +229,14 @@
             , 'rgba(255, 206, 86, 0.7)'
             , 'rgba(75, 192, 192, 0.7)'
             , 'rgba(153, 102, 255, 0.7)'
-          , ]
+            ,]
           , borderColor: [
             'rgba(255, 99, 132, 1)'
             , 'rgba(54, 162, 235, 1)'
             , 'rgba(255, 206, 86, 1)'
             , 'rgba(75, 192, 192, 1)'
             , 'rgba(153, 102, 255, 1)'
-          , ]
+            ,]
           , borderWidth: 1
         }]
       }
@@ -254,8 +253,9 @@
 </script>
 
 <!-- Dummy Data (Data Mahasiswa) -->
-{{-- <script>
-  document.addEventListener('DOMContentLoaded', function() {
+{{--
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
     var ctx = document.getElementById('myChart2').getContext('2d');
     var myChart2 = new Chart(ctx, {
       type: 'bar'
@@ -270,14 +270,14 @@
             , 'rgba(255, 206, 86, 0.7)'
             , 'rgba(75, 192, 192, 0.7)'
             , 'rgba(153, 102, 255, 0.7)'
-          , ]
+            ,]
           , borderColor: [
             'rgba(255, 99, 132, 1)'
             , 'rgba(54, 162, 235, 1)'
             , 'rgba(255, 206, 86, 1)'
             , 'rgba(75, 192, 192, 1)'
             , 'rgba(153, 102, 255, 1)'
-          , ]
+            ,]
           , borderWidth: 1
         }]
       }

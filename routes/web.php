@@ -15,7 +15,7 @@ use App\Http\Controllers\MailController;
 
 Route::get('/email-send', [MailController::class, 'sendEmail']);
 
-Route::get('/', function() {
+Route::get('/', function () {
     return view('home');
 });
 // Route::get('/', 'HomeController@index')->name('home');
@@ -40,14 +40,14 @@ Route::get('admin', function () {
     return view('admin.about');
 })->name('admin');
 
-Route::get('/student', function() {
+Route::get('/student', function () {
     return view('student');
 })->name('student');
 
 Route::get('/student', 'StudentController@index')->name('student')->middleware('verified');
 
 
-Route::get('/teacher', function() {
+Route::get('/teacher', function () {
     return view('teacher');
 })->name('teacher');
 
@@ -171,36 +171,50 @@ Route::get('/admin/mahasiswa/data_peserta', 'DataPesertaController@index')->name
 
 // Route teacher
 
-        Route::get('/teacher/home', function () {
-            return view('teacher.home_teacher');
-        })->name('home.teacher');
+Route::get('/teacher/home', function () {
+    return view('teacher.home_teacher');
+})->name('home.teacher');
 
-        Route::get('/teacher/profile', function () {
-            return view('teacher.profile_teacher');
-        })->name('profile');
+Route::get('/teacher/profile', function () {
+    return view('teacher.profile_teacher');
+})->name('profile');
 
-        Route::get('/teacher/kelas', function () {
-            return view('teacher.kelas_teacher');
-        })->name('kelas');
+Route::get('/teacher/kelas', function () {
+    return view('teacher.kelas_teacher');
+})->name('kelas');
 
-        Route::get('/teacher/absensi', function () {
-            return view('teacher.absensi_teacher');
-        })->name('absensi');
+Route::get('/teacher/absensi', function () {
+    return view('teacher.absensi_teacher');
+})->name('absensi');
 
-        Route::get('/teacher/kelas/tugas', function () {
-            return view('teacher.tugas_teacher');
-        })->name('tugas.teacher');
+Route::get('/teacher/kelas/tugas', function () {
+    return view('teacher.tugas_teacher');
+})->name('tugas.teacher');
 
-        Route::get('/teacher/kalender', function () {
-            return view('teacher.kalender_teacher');
-        })->name('kalender2');
+Route::get('/teacher/kalender', function () {
+    return view('teacher.kalender_teacher');
+})->name('kalender2');
 
-        Route::get('/teacher/anggota', function () {
-            return view('teacher.anggota_teacher');
-        })->name('anggota');
+Route::get('/teacher/anggota', function () {
+    return view('teacher.anggota_teacher');
+})->name('anggota');
 
-        Route::get('/teacher/nilai', function () {
-            return view('teacher.nilai_teacher');
-        })->name('nilai.teacher');
+Route::get('/teacher/nilai', function () {
+    return view('teacher.nilai_teacher');
+})->name('nilai.teacher');
 // Route teacher
-// Route teacher
+
+
+// Route Calendar
+Route::resource('/admin/calendar', 'EventController');
+
+// Route::get('addeventurl','EventController@create')->name('EventController.store');
+Route::get('addeventurl', 'EventController@display')->name('EventController.store');
+Route::post('addeventurl/store', 'EventController@store')->name('addevent.store');
+
+Route::get('editeventurl', 'EventController@show');
+Route::get('deleteeventurl', 'EventController@show');
+
+Route::post('editeventurl/update/{id}', 'EventController@update')->name('editform_update');
+
+Route::get('deleteeventurl/{id}', 'EventController@destroy');

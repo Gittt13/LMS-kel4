@@ -8,7 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css" />
   <title>{{ Config::get('settings.name') }} Dashboard Admin {{ Config::get('settings.description') }}</title>
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -123,6 +124,16 @@
                 <i class="nav-icon fas fa-info"></i>
                 <p>
                   {{ __('About') }}
+                </p>
+              </a>
+            </li>
+
+            <!-- Navbar Item - Calendar -->
+            <li class="nav-item">
+              <a href="{{ route('admin.calendar') }}" class="nav-link {{ is_active('admin.calendar') }}">
+                <i class="nav-icon fas fa-info"></i>
+                <p>
+                  {{ __('Calendar') }}
                 </p>
               </a>
             </li>
