@@ -4,7 +4,7 @@
 <div class="container mt-1">
   <div class="container-fluid "></div>
   <h3 class="card-header mb-5 text-center " style="font-size: 40px; font-family: 'Noto Sans JP', sans-serif;">
-    {{ __('Sugeng Rawuh Hokage') }} {{ auth()->user()->name }}
+    {{ __('Selamat Datang Admin') }} {{ auth()->user()->name }}
   </h3>
 </div>
 </div>
@@ -28,7 +28,7 @@
         <i class="fas fa-graduation-cap mb-2" style="font-size: 90px;"></i>
         <h3>Data Instruktur</h3>
         <h5>Total: 2</h5>
-        <a href="#" class="btn btn-light mt-3">More Info</a>
+        <a href="#" class="btn btn-light mt-3">Selengkapnya</a>
       </div>
     </div>
   </div>
@@ -37,9 +37,9 @@
     <div class="card text-center" style="background-color: #e74c3c; border-radius: 15px; color: white;">
       <div class="card-body">
         <i class="fas fa-book mb-2" style="font-size: 90px;"></i>
-        <h3>Jurusan</h3>
-        <h5>Total: 8</h5>
-        <a href="#" class="btn btn-light mt-3">More Info</a>
+        <h3>Data Kelas</h3>
+        <h5>Total: 3 </h5>
+        <a href="#" class="btn btn-light mt-3">Selengkapnya</a>
       </div>
     </div>
   </div>
@@ -48,9 +48,9 @@
     <div class="card text-center" style="background-color: #f39c12; border-radius: 15px; color: white;">
       <div class="card-body">
         <i class="fas fa-user-graduate mb-2" style="font-size: 90px;"></i>
-        <h3>Mata Kuliah</h3>
-        <h5>Total: 24</h5>
-        <a href="#" class="btn btn-light mt-3">More Info</a>
+        <h3>Data Pelajaran</h3>
+        <h5>Total: 18</h5>
+        <a href="#" class="btn btn-light mt-3">Selengkapnya</a>
       </div>
     </div>
   </div>
@@ -101,7 +101,7 @@
     <div class="col-md-6 mt-3">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Grafik Data Jurusan Mata Pelajaran</h2>
+          <h2 class="card-title">Perbandingan Mahasiswa di Tiap Jurusan</h2>
           <canvas id="diagram1" width="400" height="400"></canvas>
         </div>
       </div>
@@ -111,7 +111,7 @@
     <div class="col-md-6 mt-3">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Perbandingan Mahasiswa di Tiap Jurusan</h2>
+          <h2 class="card-title"> Grafik Data Kelas</h2>
           <canvas id="diagram2" width="400" height="200"></canvas>
         </div>
       </div>
@@ -187,22 +187,18 @@
     var perbandinganChart = new Chart(ctx, {
       type: 'doughnut'
       , data: {
-        labels: ['Teknik Mesin', 'Teknik Kimia', 'Teknik Elektro', 'Teknik Komputer', 'Teknik Sipil']
+        labels: ['Kelas Umum', 'Kelas Programming', 'Kelas Tambahan']
         , datasets: [{
-          data: [80, 50, 30, 20, 70], // Ganti dengan data yang sesuai
+          data: [18, 5, 4,], // Ganti dengan data yang sesuai
           backgroundColor: [
             'rgba(255, 99, 132, 0.7)'
             , 'rgba(54, 162, 235, 0.7)'
             , 'rgba(255, 206, 86, 0.7)'
-            , 'rgba(75, 192, 192, 0.7)'
-            , 'rgba(153, 102, 255, 0.7)'
           , ]
           , borderColor: [
             'rgba(255, 99, 132, 0.7)'
             , 'rgba(54, 162, 235, 0.7)'
             , 'rgba(255, 206, 86, 0.7)'
-            , 'rgba(75, 192, 192, 0.7)'
-            , 'rgba(153, 102, 255, 0.7)'
           , ]
           , borderWidth: 1
         }]
