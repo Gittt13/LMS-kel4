@@ -92,7 +92,7 @@
           <div class="col-md-6 mt-3">
             <div class="card">
               <div class="card-body">
-                <h2 class="card-title">Perbandingan Mahasiswa di Tiap Jurusan</h2>
+                <h2 class="card-title">Grafik Jumlah Instruktur</h2>
                 <canvas id="diagram1" width="400" height="400"></canvas>
               </div>
             </div>
@@ -116,32 +116,32 @@
     </div>
 
 
-    {{-- Data Mahasiswa --}}
+    {{-- Data Peserta--}}
     <div class="col-md-12 mt-5">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Data Mahasiswa
+          <h2 class="card-title">Data Peserta
           </h2>
           <canvas id="myChart" width="400" height="200"></canvas>
         </div>
       </div>
     </div>
 
-    {{-- Data Jurusan --}}
+    {{-- Data Instructur --}}
     <div class="col-md-12 mt-5">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Data Jurusan</h2>
+          <h2 class="card-title">Data Instructur</h2>
           <canvas id="myChart" width="400" height="200"></canvas>
         </div>
       </div>
     </div>
 
-    {{-- Data Dosen Pengajar --}}
+    {{-- Data Kelas --}}
     <div class="col-md-12 mt-5">
       <div class="card">
         <div class="card-body">
-          <h2 class="card-title">Data Dosen Pelajaran</h2>
+          <h2 class="card-title">Data Kelas</h2>
           <canvas id="myChart" width="400" height="200"></canvas>
         </div>
       </div>
@@ -194,45 +194,40 @@
   </script>
 
 
-  <!-- Dummy Data (Data Jurusan Mata Pelajaran) -->
+  <!-- Dummy Data  -->
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var ctx = document.getElementById('diagram1').getContext('2d');
-      var myChart1 = new Chart(ctx, {
-        type: 'bar'
-        , data: {
-          labels: ['Teknik Mesin', 'Teknik Kimia', 'Teknik Elektro', 'Teknik Komputer', 'Teknik Sipil']
-          , datasets: [{
-            label: 'Jumlah Mata Kuliah'
-            , data: [15, 22, 18, 25, 20]
-            , backgroundColor: [
-              'rgba(255, 99, 132, 0.7)'
-              , 'rgba(54, 162, 235, 0.7)'
-              , 'rgba(255, 206, 86, 0.7)'
-              , 'rgba(75, 192, 192, 0.7)'
-              , 'rgba(153, 102, 255, 0.7)'
-              ,]
-            , borderColor: [
-              'rgba(255, 99, 132, 1)'
-              , 'rgba(54, 162, 235, 1)'
-              , 'rgba(255, 206, 86, 1)'
-              , 'rgba(75, 192, 192, 1)'
-              , 'rgba(153, 102, 255, 1)'
-              ,]
-            , borderWidth: 1
-          }]
-        }
-        , options: {
-          scales: {
-            y: {
-              beginAtZero: true
-            }
+  document.addEventListener('DOMContentLoaded', function () {
+    var ctx = document.getElementById('diagram1').getContext('2d');
+    var myChart1 = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Kelas Umum', 'Kelas Programming', 'Kelas Tambahan'],
+        datasets: [{
+          label: 'Jumlah Instruktur',
+          data: [10, 15, 8], // Ganti nilai ini sesuai dengan jumlah instruktur di setiap kelas
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.7)',
+            'rgba(54, 162, 235, 0.7)',
+            'rgba(255, 206, 86, 0.7)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
           }
         }
-      });
+      }
     });
-
-  </script>
+  });
+</script>
 
   <!-- Dummy Data (Data Mahasiswa) -->
   {{--
