@@ -12,12 +12,15 @@
                     <h2>User Profile</h2>
                 </div>
                 <div class="card-body">
+                    @foreach ($profil as $item)
+                        
                     <ul class="list-group">
-                        <li class="list-group-item"><strong>Nama:</strong> John Doe</li>
-                        <li class="list-group-item"><strong>Alamat:</strong> 123 Street, City</li>
-                        <li class="list-group-item"><strong>Email:</strong> john@example.com</li>
-                        <li class="list-group-item"><strong>No. HP:</strong> 123-456-7890</li>
+                        <li class="list-group-item"><strong>Nama: </strong>{{ $item->nama }}</li>
+                        <li class="list-group-item"><strong>Alamat: </strong>{{ $item->alamat }}</li>
+                        <li class="list-group-item"><strong>Email: </strong>{{ $item->email }}</li>
+                        <li class="list-group-item"><strong>No. HP: </strong>{{ $item->no_hp }}</li>
                     </ul>
+                    @endforeach
                 </div>
                 <div class="card-footer text-center">
                     <a href="{{ route('edit-profil') }}" class="btn btn-primary">Edit Profil</a>
