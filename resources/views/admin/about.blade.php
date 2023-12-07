@@ -43,7 +43,7 @@
                         </svg>
                       </div>
                       <div>
-                        <h2 class="h4 mb-3">Mudah Belajar</h2>
+                        <h2 class="h4 mb-3">Belajar Mudah</h2>
                         <p class="text-secondary mb-0">We are crafting a digital method that subsists life across all
                           mediums.</p>
                       </div>
