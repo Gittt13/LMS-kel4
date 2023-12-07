@@ -21,19 +21,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>WEB DEVELOPER</td>
-          <td>Mempelajari programming yang berkaitan dengan WEB</td>
-          <td>
-            <a href="#" class="btn btn-warning btn-sm" role="button">
-              <i class="fas fa-edit"></i> <!-- Icon Edit -->
-            </a>
-            <a href="#" class="btn btn-danger btn-sm" role="button">
-              <i class="fas fa-trash-alt"></i> <!-- Icon Hapus -->
-            </a>
-          </td>
-        </tr>
+        @foreach ($kelas_programmings as $kelas_programming)
+          <tr>
+            <td> {{ $loop->index + 1 }}</td>
+            <td> {{ $kelas_programming->nama }}</td>
+            <td> {{ $kelas_programming->deskripsi }} </td>
+            <td>
+              <a href="#" class="btn btn-warning btn-sm" role="button">Edit</a>
+              <a href="#" class="btn btn-danger btn-sm" role="button">Hapus</a>
+            </td>
+          </tr>
+          @endforeach
         <!-- Tambahkan baris lebih banyak jika diperlukan -->
       </tbody>
     </table>
