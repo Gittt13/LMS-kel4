@@ -21,19 +21,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Critical Thinking</td>
-          <td>Mempelajari Cara berfikir yang cerdas</td>
-          <td>
-            <a href="#" class="btn btn-warning btn-sm" role="button">
-              <i class="fas fa-edit"></i> <!-- Icon Edit -->
-            </a>
-            <a href="#" class="btn btn-danger btn-sm" role="button">
-              <i class="fas fa-trash-alt"></i> <!-- Icon Hapus -->
-            </a>
-          </td>
-        </tr>
+         @foreach ($kelas_tambahans as $kelas_tambahan)
+          <tr>
+            <td> {{ $loop->index + 1 }}</td>
+            <td> {{ $kelas_tambahan->nama }}</td>
+            <td> {{ $kelas_tambahan->deskripsi }} </td>
+            <td>
+              <a href="#" class="btn btn-warning btn-sm" role="button">Edit</a>
+              <a href="#" class="btn btn-danger btn-sm" role="button">Hapus</a>
+            </td>
+          </tr>
+          @endforeach
         <!-- Tambahkan baris lebih banyak jika diperlukan -->
       </tbody>
     </table>
