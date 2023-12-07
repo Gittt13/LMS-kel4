@@ -59,7 +59,8 @@ class ProfilStudentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $profil = ProfilStudent::whereId($id)->first();
+        return view('students.edit_profil')->with('profil', $profil);
     }
 
     /**
@@ -71,7 +72,22 @@ class ProfilStudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nama' => 'required',
+            'alamat' => 'required',
+            'email' => 'required|email',
+            'no_hp' => 'required',
+        ]);
+
+        $profil = ProfilStudent::find($id);
+        $profil->nama = $request->nama;
+        $profil->alamat = $request->alamat;
+        $profil->email = $request->email;
+        $profil->no_hp = $request->no_hp;
+        $profil->save();
+
+        // return redirect('students.profil_student');
+        return redirect()->route('students.profil_student');
     }
 
     /**
