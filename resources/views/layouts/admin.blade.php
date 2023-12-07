@@ -158,7 +158,7 @@
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="{{ route('admin/kelas-umum/halaman') }}" class="nav-link {{ is_active('admin/kelas-umum/halaman') }}">
+                  <a href="{{ route('admin.kelas-umum.halaman') }}" class="nav-link {{ is_active('admin/kelas-umum/halaman') }}">
                     <i class="nav-icon fas fa-user-graduate"></i>
                     <p>Kelas Umum</p>
                   </a>

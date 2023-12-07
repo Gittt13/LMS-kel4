@@ -108,7 +108,8 @@ Route::get('/admin/dashboard', 'DashboardController@index')->name('admin.dashboa
 // Route::get('/stream', 'StreamController@index')->name('stream');
 Route::get('/admin/about', 'AboutController@index')->name('admin.about');
 Route::get('/admin/profile', 'ProfileController@index')->name('admin.profile');
-Route::get('/admin/kelas-umum/halaman', 'KelasUmumController@index')->name('admin/kelas-umum/halaman');
+Route::get('/admin/kelas-umum/halaman', 'KelasUmumController@showKelasUmum')->name('admin.kelas-umum.halaman');
+
 Route::get('/admin/kelas-programming/halaman', 'KelasProgrammingController@index')->name('admin/kelas-programming/halaman');
 Route::get('/admin/kelas-tambahan/halaman', 'KelasTambahanController@index')->name('admin/kelas-tambahan/halaman');
 Route::get('/admin/instructur-profil/halaman', 'InstructurProfilController@index')->name('admin/instructur-profil/halaman');
