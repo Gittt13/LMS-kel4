@@ -24,15 +24,6 @@
         </header>
         <main>
             @yield('content')
-            <a
-                name=""
-                id=""
-                class="btn btn-primary"
-                href="{{ route('admin.dashboard') }}"
-                role="button"
-                >Button</a
-            >
-            
         </main>
         <footer>
             <!-- place footer here -->
