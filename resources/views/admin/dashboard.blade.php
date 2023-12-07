@@ -82,45 +82,7 @@
         </div>
       </div>
 
-      <div class="col-md-3 mt-3">
-        <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
-          <div class="card-body">
-            <i class="fas fa-users mb-2" style="font-size: 50px; float: left; margin-right: 10px;"></i>
-            <h5>Total User Aktif</h5>
-            <h5>Total: 150</h5>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-md-3 mt-3">
-        <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
-          <div class="card-body">
-            <i class="fas fa-user-shield" style="font-size: 50px; float: left; margin-right: 8px;"></i>
-            <h5>Total Admin User</h5>
-            <h5>Total: 50</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 mt-3">
-        <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
-          <div class="card-body">
-            <i class="fas fa-user-graduate" style="font-size: 50px; float: left; margin-right: 8px;"></i>
-            <h5>Total Mahasiswa User</h5>
-            <h5>Total: 100</h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-3 mt-3">
-        <div class="card text-left" style="background-color: #B99470; border-radius: 15px; color: white;">
-          <div class="card-body">
-            <i class="fas fa-user-graduate" style="font-size: 50px; float: left; margin-right: 8px;"></i>
-            <h5>Total Pengunjung</h5>
-            <h5>Total: 5</h5>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="container-fluid">
@@ -149,22 +111,10 @@
       <!-- END GRAFIK -->
       <!-- Kalender Kegiatan -->
 
-<<<<<<< HEAD
 
 
-
-  
-=======
-      <div class="col-md-14 mt-5">
-        <div class="card">
-          <div class="card-body" style="height: 100vh !important;">
-            <h2 class="card-title">Kalender Kegiatan</h2>
-            <!-- <iframe src="https://calendar.google.com/calendar/embed?height=630&wkst=1&bgcolor=%23ffffff&ctz=Asia%2FJakarta&title=Uni-Learn%20Schedule&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=Y18wZGFkMDJkYjdlZTY3MjhmNTljMWJhNGIxZDRlYTVjZGY0ZmVjYzc3ZDE0MDk0MDNiMTc5OWNjZTVmYmRjNDUyQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%2333B679&color=%238E24AA" style="border:solid 1px #777" width="1200" height="800" frameborder="0" scrolling="no"></iframe> -->
-          </div>
-        </div>
-      </div>
     </div>
->>>>>>> a61f1f11175809d9fc52ce31e4ed83334691b9a5
+
 
     {{-- Data Mahasiswa --}}
     <div class="col-md-12 mt-5">
