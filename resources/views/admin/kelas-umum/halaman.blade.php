@@ -8,7 +8,7 @@
       <h1 class="mb-0">Data Mata Pelajaran Kelas Umum</h1>
     </div>
     <div class="card-header text-right">
-      <a href="#" class="btn btn-primary" role="button">Tambah Pelajaran</a>
+      <a href="{{ route('admin.kelas-umum.tambah') }}" class="btn btn-primary" role="button">Tambah Pelajaran</a>
     </div>
     <div class="table-responsive">
       <table class="table table-hover mb-0" id="data-table">
@@ -27,8 +27,12 @@
             <td> {{ $kelas_umum->nama }}</td>
             <td> {{ $kelas_umum->deskripsi }} </td>
             <td>
-              <a href="#" class="btn btn-warning btn-sm" role="button">Edit</a>
-              <a href="#" class="btn btn-danger btn-sm" role="button">Hapus</a>
+              <a href="{{ route('admin.kelas-umum.edit', $kelas_umum->id) }}" class="btn btn-warning btn-sm" role="button">Edit</a>
+              <form action="{{ route('admin.kelas-umum.hapus', $kelas_umum->id) }}" method="post" class="d-inline">
+                @csrf
+                @method('delete')
+                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Anda yakin ingin menghapus?')">Hapus</button>
+              </form>
             </td>
           </tr>
           @endforeach

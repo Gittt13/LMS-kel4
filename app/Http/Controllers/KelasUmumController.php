@@ -13,19 +13,19 @@ class KelasUmumController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function showKelasUmum()
-{
-    $kelas_umums = KelasUmum::all();
-    return view('admin.kelas-umum.halaman', compact('kelas_umums'));
-}
+    {
+        $kelas_umums = KelasUmum::all();
+        return view('admin.kelas-umum.halaman', compact('kelas_umums'));
+    }
 
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function tampilFormTambah()
     {
-        //
+        return view('admin.kelas-umum.tambah_pelajaran');
     }
 
     /**
@@ -34,9 +34,22 @@ class KelasUmumController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function simpanPelajaran(Request $request)
     {
-        //
+        // Validasi input jika diperlukan
+        $request->validate([
+            'nama' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        // Simpan data ke database
+        KelasUmum::create([
+            'nama' => $request->input('nama'),
+            'deskripsi' => $request->input('deskripsi'),
+        ]);
+
+        // Redirect atau berikan respons yang sesuai
+        return redirect('/admin/kelas-umum/halaman')->with('success', 'Pelajaran berhasil ditambahkan!');
     }
 
     /**
@@ -56,9 +69,29 @@ class KelasUmumController extends Controller
      * @param  \App\KelasUmum  $kelasUmum
      * @return \Illuminate\Http\Response
      */
-    public function edit(KelasUmum $kelasUmum)
+    public function editForm($id)
     {
-        //
+        $kelas_umum = KelasUmum::find($id);
+        return view('admin.kelas-umum.edit_pelajaran', compact('kelas_umum'));
+    }
+
+    public function updatePelajaran(Request $request, $id)
+    {
+        // Validasi input jika diperlukan
+        $request->validate([
+            'nama' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        // Update data ke database
+        $kelas_umum = KelasUmum::find($id);
+        $kelas_umum->update([
+            'nama' => $request->input('nama'),
+            'deskripsi' => $request->input('deskripsi'),
+        ]);
+
+        // Redirect atau berikan respons yang sesuai
+        return redirect('/admin/kelas-umum/halaman')->with('success', 'Pelajaran berhasil diperbarui!');
     }
 
     /**
@@ -79,8 +112,11 @@ class KelasUmumController extends Controller
      * @param  \App\KelasUmum  $kelasUmum
      * @return \Illuminate\Http\Response
      */
-    public function destroy(KelasUmum $kelasUmum)
+    public function hapusPelajaran($id)
     {
-        //
+        $kelas_umum = KelasUmum::find($id);
+        $kelas_umum->delete();
+
+        return redirect('/admin/kelas-umum/halaman')->with('success', 'Pelajaran berhasil dihapus!');
     }
 }

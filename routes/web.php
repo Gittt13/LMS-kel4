@@ -106,7 +106,14 @@ Route::get('/admin/dashboard', 'DashboardController@index')->name('admin.dashboa
 // Route::get('/stream', 'StreamController@index')->name('stream');
 Route::get('/admin/about', 'AboutController@index')->name('admin.about');
 Route::get('/admin/profile', 'ProfileController@index')->name('admin.profile');
+//kelas umum
 Route::get('/admin/kelas-umum/halaman', 'KelasUmumController@showKelasUmum')->name('admin.kelas-umum.halaman');
+Route::get('/admin/kelas-umum/tambah', 'KelasUmumController@tampilFormTambah')->name('admin.kelas-umum.tambah');
+Route::post('/admin/kelas-umum/simpan', 'KelasUmumController@simpanPelajaran')->name('admin.kelas-umum.simpan');
+Route::get('/admin/kelas-umum/edit/{id}', 'KelasUmumController@editForm')->name('admin.kelas-umum.edit');
+Route::put('/admin/kelas-umum/update/{id}', 'KelasUmumController@updatePelajaran')->name('admin.kelas-umum.update');
+Route::delete('/admin/kelas-umum/hapus/{id}', 'KelasUmumController@hapusPelajaran')->name('admin.kelas-umum.hapus');
+//kelas umum
 Route::get('/admin/kelas-programming/halaman', 'KelasProgrammingController@showKelasProgramming')->name('admin/kelas-programming/halaman');
 Route::get('/admin/kelas-tambahan/halaman', 'KelasTambahanController@showKelasTambahan')->name('admin/kelas-tambahan/halaman');
 Route::get('/admin/instructur-profil/halaman', 'InstructurProfilController@index')->name('admin/instructur-profil/halaman');
