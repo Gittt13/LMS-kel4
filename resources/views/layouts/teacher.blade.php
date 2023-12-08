@@ -120,7 +120,7 @@
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#tambahPesertaModal">Tambah Peserta</a>
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#tambahKelasModal">Tambah Kelas</a>
+        <a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#tambahKelasModal">Tambah Kelas</a>
     </div>
 </div>
 
@@ -253,7 +253,7 @@
     
     <!-- SEARCH FORM -->
     <form class="form-inline ml-auto">
-        <div class="dropdown open">
+        <!-- <div class="dropdown open">
             <a class="btn btn-primary dropdown-toggle text-light" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
@@ -266,7 +266,7 @@
                 <a class="dropdown-item" href="#">Tambah Peserta</a>
                 <a class="dropdown-item" href="#">Lihat Peserta</a>
             </div>
-        </div>
+        </div> -->
         <div class="input-group input-group-sm ml-3">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
