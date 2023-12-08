@@ -17,12 +17,12 @@
         <tr>
           <th>No.</th>
           <th>Nama </th>
-          <th>Foto Profil</th>
+          <th>Foto</th>
           <th>Email</th>
           <th>Alamat</th>
           <th>Lulusan Asal</th>
           <th>Nomor Telepon</th>
-          <th>Riwayat Mengajar</th>
+          <th>Jenis Kelamin</th>
           <th>Aksi</th>
         </tr>
       </thead>
@@ -35,7 +35,7 @@
           <td>Desa Konoha</td>
           <td>Iwagakure School</td>
           <td>087236232773</td>
-          <td>2018-2019 (Melatih Anbu)</td>
+          <td>Pria</td>
           <td>
             <a href="#" class="btn btn-warning btn-sm" role="button">
               <i class="fas fa-edit"></i> <!-- Icon Edit -->
