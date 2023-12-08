@@ -36,7 +36,7 @@ class KelasUmumController extends Controller
      */
     public function simpanPelajaran(Request $request)
     {
-        // Validasi input jika diperlukan
+        // Validasi input 
         $request->validate([
             'nama' => 'required',
             'deskripsi' => 'required',
@@ -77,7 +77,7 @@ class KelasUmumController extends Controller
 
     public function updatePelajaran(Request $request, $id)
     {
-        // Validasi input jika diperlukan
+        // Validasi input 
         $request->validate([
             'nama' => 'required',
             'deskripsi' => 'required',
