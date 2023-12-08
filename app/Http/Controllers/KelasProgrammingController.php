@@ -12,15 +12,13 @@ class KelasProgrammingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function index()
-    // {
-    //     //
-    // }
     public function showKelasProgramming()
-{
-    $kelas_programmings = KelasProgramming::all();
-    return view('admin.kelas-programming.halaman', compact('kelas_programmings'));
-}
+    {
+        $kelas_programmings = KelasProgramming::all();
+        return view('admin.kelas-programming.halaman', compact('kelas_programmings'));
+    }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -86,5 +84,62 @@ class KelasProgrammingController extends Controller
     public function destroy(KelasProgramming $kelasProgramming)
     {
         //
+    }
+
+
+    public function tampilFormTambah()
+    {
+        return view('admin.kelas-programming.tambah_pelajaran');
+    }
+
+    public function simpanKelasProgramming(Request $request)
+    {
+        
+        $request->validate([
+            'nama' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        
+        KelasProgramming::create([
+            'nama' => $request->input('nama'),
+            'deskripsi' => $request->input('deskripsi'),
+        ]);
+
+        
+        return redirect('/admin/kelas-programming/halaman')->with('success', 'Kelas programming berhasil ditambahkan!');
+    }
+
+    public function editForm($id)
+    {
+        $kelas_programming = KelasProgramming::find($id);
+        return view('admin.kelas-programming.edit_pelajaran', compact('kelas_programming'));
+    }
+
+    public function updateKelasProgramming(Request $request, $id)
+    {
+        
+        $request->validate([
+            'nama' => 'required',
+            'deskripsi' => 'required',
+        ]);
+
+        
+        $kelas_programming = KelasProgramming::find($id);
+        $kelas_programming->update([
+            'nama' => $request->input('nama'),
+            'deskripsi' => $request->input('deskripsi'),
+        ]);
+
+
+        return redirect('/admin/kelas-programming/halaman')->with('success', 'Kelas programming berhasil diperbarui!');
+    }
+
+    public function hapusKelasProgramming($id)
+    {
+        $kelas_programming = KelasProgramming::find($id);
+        $kelas_programming->delete();
+
+        return redirect('/admin/kelas-programming/halaman')->with('success', 'Kelas programming berhasil dihapus!');
     }
 }

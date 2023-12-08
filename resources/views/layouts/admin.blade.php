@@ -164,7 +164,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('admin/kelas-programming/halaman') }}" class="nav-link {{ is_active('admin/kelas-programming/halaman') }}">
+                  <a href="{{ route('admin.kelas-programming.halaman') }}" class="nav-link {{ is_active('admin/kelas-programming/halaman') }}">
                     <i class="nav-icon fas fa-users"></i>
                     <p>Kelas Programming</p>
                   </a>

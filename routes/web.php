@@ -114,7 +114,24 @@ Route::get('/admin/kelas-umum/edit/{id}', 'KelasUmumController@editForm')->name(
 Route::put('/admin/kelas-umum/update/{id}', 'KelasUmumController@updatePelajaran')->name('admin.kelas-umum.update');
 Route::delete('/admin/kelas-umum/hapus/{id}', 'KelasUmumController@hapusPelajaran')->name('admin.kelas-umum.hapus');
 //kelas umum
-Route::get('/admin/kelas-programming/halaman', 'KelasProgrammingController@showKelasProgramming')->name('admin/kelas-programming/halaman');
+
+//kelas tambahan
+Route::get('/admin/kelas-tambahan/tambah', 'KelasTambahanController@tampilFormTambah')->name('admin.kelas-tambahan.tambah');
+Route::post('/admin/kelas-tambahan/simpan', 'KelasTambahanController@simpanKelasTambahan')->name('admin.kelas-tambahan.simpan');
+Route::get('/admin/kelas-tambahan/edit/{id}', 'KelasTambahanController@editForm')->name('admin.kelas-tambahan.edit');
+Route::put('/admin/kelas-tambahan/update/{id}', 'KelasTambahanController@updateKelasTambahan')->name('admin.kelas-tambahan.update');
+Route::delete('/admin/kelas-tambahan/hapus/{id}', 'KelasTambahanController@hapusKelasTambahan')->name('admin.kelas-tambahan.hapus');
+//kelas tambahan
+
+//kelas programming
+Route::get('/admin/kelas-programming/halaman', 'KelasProgrammingController@showKelasProgramming')->name('admin.kelas-programming.halaman');
+Route::get('/admin/kelas-programming/tambah', 'KelasProgrammingController@tampilFormTambah')->name('admin.kelas-programming.tambah');
+Route::post('/admin/kelas-programming/simpan', 'KelasProgrammingController@simpanKelasProgramming')->name('admin.kelas-programming.simpan');
+Route::get('/admin/kelas-programming/edit/{id}', 'KelasProgrammingController@editForm')->name('admin.kelas-programming.edit');
+Route::put('/admin/kelas-programming/update/{id}', 'KelasProgrammingController@updateKelasProgramming')->name('admin.kelas-programming.update');
+Route::delete('/admin/kelas-programming/hapus/{id}', 'KelasProgrammingController@hapusKelasProgramming')->name('admin.kelas-programming.hapus');
+//kelas programming
+
 Route::get('/admin/kelas-tambahan/halaman', 'KelasTambahanController@showKelasTambahan')->name('admin/kelas-tambahan/halaman');
 Route::get('/admin/instructur-profil/halaman', 'InstructurProfilController@index')->name('admin/instructur-profil/halaman');
 Route::get('/admin/instructur-kelas/halaman', 'InstructurKelasController@index')->name('admin/instructur-kelas/halaman');
