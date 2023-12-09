@@ -16,8 +16,8 @@
             <a href="{{route('student')}}" class="btn-get-started scrollto">Get Started</a>
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="/img/hero-img.png" class="img-fluid animated" alt="">
+        <div class="col-lg-6 order-1 order-lg-2 hero-img ml-auto" data-aos="zoom-in" data-aos-delay="200">
+          <img src="/img/uni-learn.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -256,9 +256,9 @@
             <h3>Call To Action</h3>
             <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
-          <div class="col-lg-3 cta-btn-container text-center">
+          <!-- <div class="col-lg-3 cta-btn-container text-center">
             <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
+          </div> -->
         </div>
 
       </div>

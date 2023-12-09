@@ -120,7 +120,7 @@
     </button>
     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#tambahPesertaModal">Tambah Peserta</a>
-        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#tambahKelasModal">Tambah Kelas</a>
+        <a class="dropdown-item" href="#" data-toggle="modal" data-bs-toggle="modal" data-bs-target="#tambahKelasModal">Tambah Kelas</a>
     </div>
 </div>
 
@@ -253,7 +253,7 @@
     
     <!-- SEARCH FORM -->
     <form class="form-inline ml-auto">
-        <div class="dropdown open">
+        <!-- <div class="dropdown open">
             <a class="btn btn-primary dropdown-toggle text-light" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-person-add" viewBox="0 0 16 16">
@@ -266,7 +266,7 @@
                 <a class="dropdown-item" href="#">Tambah Peserta</a>
                 <a class="dropdown-item" href="#">Lihat Peserta</a>
             </div>
-        </div>
+        </div> -->
         <div class="input-group input-group-sm ml-3">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -282,11 +282,13 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4" id="logo">
         <!-- Brand Logo -->
-        <a href="{{ route('home') }}" class="brand-link">
-            <img src="{{  Config::get('settings.logo') }}" alt="{{  Config::get('settings.name') }}" class="brand-image img-circle elevation-3"
-                 style="opacity: .8">
-            <span class="brand-text font-weight-light">{{  Config::get('settings.name') }} <span class="right badge badge-danger">LOGONYA</span></span>
-        </a>
+        <a href="{{ route('home') }}" class="brand-link" style="text-decoration:none;">
+                <img src="/img/uni-learn.png" alt="{{ Config::get('settings.name') }}"
+                    class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">{{ Config::get('settings.name') }} 
+                    <b>Uni-Learn</b>&nbspTeacher  
+                </span>
+            </a>
 
         <!-- Sidebar -->
         <div class="sidebar">

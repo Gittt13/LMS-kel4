@@ -49,7 +49,7 @@
                                 <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">{{ __('Login') }}</h3>
 
                                 <div class="form-outline mb-4">
-                                    <label class="form-label" for="form2Example18">{{ __('E-Mail or Username')
+                                    <label class="form-label" for="form2Example18">{{ __('E-Mail')
                                         }}</label>
                                     <input type="email" id="form2Example18"
                                         class="form-control form-control-lg @error('email') is-invalid @enderror"

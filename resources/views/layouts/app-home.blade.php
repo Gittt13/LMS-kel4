@@ -31,6 +31,9 @@
   body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
   .fa-anchor,.fa-coffee {font-size:200px}
+  .img {
+  margin-left: 20px; /* Sesuaikan nilai ini sesuai dengan kebutuhan Anda */
+    }
   </style>
 </head>
 
@@ -40,7 +43,7 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">UNI-LEARN</a></h1>
+      <h1 class="logo me-auto"><a href="index.html"><img src="/img/uni-learn.png" alt="">UNI-LEARN</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
