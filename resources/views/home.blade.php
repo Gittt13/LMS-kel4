@@ -16,8 +16,8 @@
             <a href="{{route('student')}}" class="btn-get-started scrollto">Get Started</a>
           </div>
         </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="/img/hero-img.png" class="img-fluid animated" alt="">
+        <div class="col-lg-6 order-1 order-lg-2 hero-img ml-auto" data-aos="zoom-in" data-aos-delay="200">
+          <img src="/img/uni-learn.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>

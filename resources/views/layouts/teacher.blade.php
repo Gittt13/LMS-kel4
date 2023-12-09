@@ -282,11 +282,13 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4" id="logo">
         <!-- Brand Logo -->
-        <a href="{{ route('home') }}" class="brand-link">
-            <img src="{{  Config::get('settings.logo') }}" alt="{{  Config::get('settings.name') }}" class="brand-image img-circle elevation-3"
-                 style="opacity: .8">
-            <span class="brand-text font-weight-light">{{  Config::get('settings.name') }} <span class="right badge badge-danger">LOGONYA</span></span>
-        </a>
+        <a href="{{ route('home') }}" class="brand-link" style="text-decoration:none;">
+                <img src="/img/uni-learn.png" alt="{{ Config::get('settings.name') }}"
+                    class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">{{ Config::get('settings.name') }} 
+                    <b>Uni-Learn</b>&nbspTeacher  
+                </span>
+            </a>
 
         <!-- Sidebar -->
         <div class="sidebar">
