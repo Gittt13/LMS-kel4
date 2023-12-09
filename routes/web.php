@@ -122,7 +122,11 @@ Route::get('/admin/peserta-profil/halaman', 'PesertaProfilController@index')->na
 Route::get('/admin/peserta-kelas/halaman', 'PesertaKelasController@index')->name('admin/peserta-kelas/halaman');
 // 
 // Route ke data Mahasiswa
-Route::get('/admin/mahasiswa/data_peserta', 'DataPesertaController@index')->name('data_peserta');
+Route::get('/admin/data_peserta', 'DataPesertaController@index')->name('data_peserta');
+// CRUD
+Route::put('/admin/data_peserta', 'DataPesertaController@update')->name('data_pesertaUpdate');
+
+Route::post('/admin/data_peserta', 'DataPesertaController@store')->name('create_data_peserta');
 
 // Route::get('/admin.reports', 'ReportsController@index')->name('admin.reports');
 // Route::get('/admin.settings', 'SettingsController@index')->name('admin.settings');

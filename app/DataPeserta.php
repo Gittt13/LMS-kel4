@@ -7,24 +7,25 @@ use Illuminate\Database\Eloquent\Model;
 
 class DataPeserta extends Model
 {
-    protected $table = 'tbl_participations';
-    protected $primaryKey = 'participation_id';
+    protected $table = "data_peserta";
+    protected $primaryKey = "id";
 
-    // Mass Assignment
     protected $fillable = [
-        'participation_id',
-        'name',
+        'id',
+        'foto',
+        'nama',
         'email',
-        'date_of_birth',
-        'phone'
+        'alamat',
+        'nomor_telepon',
+        'jenis_kelamin',
     ];
-
-    // Default Attributes
     protected $attributes = [
-        'participation_id' => '',
-        'name' => '',
+        'id' => '',
+        'foto' => '',
+        'nama' => '',
         'email' => '',
-        'date_of_birth' => '',
-        'phone' => ''
+        'alamat' => '',
+        'nomor_telepon' => '',
+        'jenis_kelamin' => ''
     ];
 }
